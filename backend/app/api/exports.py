@@ -8,6 +8,7 @@ from app.scheduler.dataset_adapter import load_default_dataset
 router = APIRouter(prefix="/exports", tags=["Exports"])
 
 @router.get("/schedule.json")
+@router.get("/schedule")
 def export_schedule():
     # If exports/schedule.json exists on disk, return it, or construct from DB
     file_path = os.path.join(os.path.dirname(__file__), "..", "..", "..", "exports", "schedule.json")
@@ -42,6 +43,7 @@ def export_schedule():
     }
 
 @router.get("/schedule_after.json")
+@router.get("/schedule_after")
 def export_schedule_after():
     file_path = os.path.join(os.path.dirname(__file__), "..", "..", "..", "exports", "schedule_after.json")
     if os.path.exists(file_path):

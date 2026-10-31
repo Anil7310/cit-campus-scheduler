@@ -90,8 +90,9 @@ def seed_demo_users():
     demo_users = [
         {
             "name": "Prof. S. R. Verma (Dean Academics)",
+            "username": "admin",
             "email": "admin@cit.edu",
-            "password_hash": get_password_hash("Admin@123"),
+            "password_hash": "$2b$12$9kVEtRMqzjVDqqp51O8Mk.o7midbFfZ.ekYxppT370Iw1vVusxAdi",
             "role": "admin",
             "department": "Dean's Office",
             "faculty_id": None,
@@ -100,8 +101,9 @@ def seed_demo_users():
         },
         {
             "name": "Dr. R. K. Mohapatra (CSE Coordinator)",
+            "username": "coordinator",
             "email": "coordinator@cit.edu",
-            "password_hash": get_password_hash("Coord@123"),
+            "password_hash": "$2b$12$Eg8r9YX2UEaxcIp5uuu.PeIKHxoTujzG9NMzNJBEninE13fOEToDa",
             "role": "coordinator",
             "department": "CSE",
             "faculty_id": "F01",
@@ -110,8 +112,9 @@ def seed_demo_users():
         },
         {
             "name": "Dr. A. Sharma (CSE Faculty)",
+            "username": "faculty",
             "email": "faculty@cit.edu",
-            "password_hash": get_password_hash("Faculty@123"),
+            "password_hash": "$2b$12$8.BHbdop9X7MtpRQF.H7CukECqwTOW.Hdp0diGrBu9Kma7I4z3.Fa",
             "role": "faculty",
             "department": "CSE",
             "faculty_id": "F01", # Real faculty in dataset with sessions!
@@ -120,8 +123,9 @@ def seed_demo_users():
         },
         {
             "name": "Vikram Seth (Robotics & Spectra Rep)",
+            "username": "club",
             "email": "club@cit.edu",
-            "password_hash": get_password_hash("Club@123"),
+            "password_hash": "$2b$12$hv5BG1YlEhPxfYq0ojhh3umFBhq50eMZ4yKHjvHYTPVPO7Vd4orly",
             "role": "club",
             "department": "Student Council",
             "faculty_id": None,
@@ -134,4 +138,7 @@ def seed_demo_users():
         existing = users_col.find_one({"email": u["email"]})
         if not existing:
             users_col.insert_one(u)
-            logger.info(f"Seeded demo user: {u['email']} ({u['role']})")
+            logger.info(f"Seeded demo user: {u['username']} / {u['email']} ({u['role']})")
+        else:
+            if not existing.get("username"):
+                users_col.update_one({"_id": existing["_id"]}, {"$set": {"username": u["username"]}})

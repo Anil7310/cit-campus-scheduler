@@ -13,7 +13,9 @@ import {
   Settings,
   X,
   Compass,
-  BookmarkCheck
+  BookmarkCheck,
+  BookOpen,
+  UserCheck
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
@@ -24,40 +26,93 @@ interface SidebarProps {
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const { user } = useAuth();
+  const role = user?.role || 'admin';
 
-  const navGroups = [
-    {
-      title: 'Navigation',
-      items: [
-        { to: '/', label: 'Dashboard', icon: LayoutDashboard },
-        { to: '/timetable', label: 'Master Timetable', icon: CalendarDays },
-        { to: '/find-room', label: 'Instant Free Room', icon: Search },
-      ],
-    },
-    {
-      title: 'Academic & Events',
-      items: [
-        { to: '/exams', label: 'Midsem Exams', icon: GraduationCap },
-        { to: '/bookings', label: 'Venue Bookings', icon: BookmarkCheck },
-        { to: '/spectra', label: 'Spectra 2026 Fest', icon: Sparkles },
-      ],
-    },
-    {
-      title: 'Solver & AI Engines',
-      items: [
-        { to: '/reschedule', label: 'Rescheduling Engine', icon: Layers },
-        { to: '/assistant', label: 'AI Voice & Hinglish', icon: Bot },
-        { to: '/manual', label: 'Manual Placement', icon: Sliders },
-      ],
-    },
-    {
-      title: 'Administration',
-      items: [
-        { to: '/import', label: 'Dataset & Solvers', icon: FileSpreadsheet },
-        { to: '/settings', label: 'Settings & Audit', icon: Settings },
-      ],
-    },
-  ];
+  // Role-specific navigation separation
+  const getNavGroups = () => {
+    if (role === 'faculty') {
+      return [
+        {
+          title: 'Faculty Workspace',
+          items: [
+            { to: '/faculty', label: 'My Faculty Portal', icon: UserCheck },
+            { to: '/timetable', label: 'Master Timetable', icon: CalendarDays },
+            { to: '/find-room', label: 'Instant Free Room', icon: Search },
+            { to: '/assistant', label: 'AI Voice & Hinglish', icon: Bot },
+          ],
+        },
+      ];
+    }
+
+    if (role === 'club') {
+      return [
+        {
+          title: 'Student Club Operations',
+          items: [
+            { to: '/spectra', label: 'Spectra 2026 Fest', icon: Sparkles },
+            { to: '/bookings', label: 'Venue Bookings', icon: BookmarkCheck },
+            { to: '/find-room', label: 'Instant Free Room', icon: Search },
+            { to: '/assistant', label: 'AI Voice & Hinglish', icon: Bot },
+          ],
+        },
+      ];
+    }
+
+    if (role === 'coordinator') {
+      return [
+        {
+          title: 'Academic Coordination',
+          items: [
+            { to: '/', label: 'Dashboard', icon: LayoutDashboard },
+            { to: '/timetable', label: 'Master Timetable', icon: CalendarDays },
+            { to: '/subjects', label: 'Subjects Directory', icon: BookOpen },
+            { to: '/find-room', label: 'Instant Free Room', icon: Search },
+          ],
+        },
+        {
+          title: 'Operations & Solver',
+          items: [
+            { to: '/bookings', label: 'Venue Bookings', icon: BookmarkCheck },
+            { to: '/reschedule', label: 'Rescheduling Engine', icon: Layers },
+            { to: '/exams', label: 'Midsem Exams', icon: GraduationCap },
+            { to: '/assistant', label: 'AI Voice & Hinglish', icon: Bot },
+          ],
+        },
+      ];
+    }
+
+    // Default / Admin
+    return [
+      {
+        title: 'Administration',
+        items: [
+          { to: '/', label: 'Dashboard', icon: LayoutDashboard },
+          { to: '/subjects', label: 'Subjects & Curriculum', icon: BookOpen },
+          { to: '/timetable', label: 'Master Timetable', icon: CalendarDays },
+          { to: '/exams', label: 'Midsem Exams', icon: GraduationCap },
+        ],
+      },
+      {
+        title: 'Venues & Solver Engine',
+        items: [
+          { to: '/bookings', label: 'Venue Bookings', icon: BookmarkCheck },
+          { to: '/reschedule', label: 'Rescheduling Engine', icon: Layers },
+          { to: '/manual', label: 'Manual Placement', icon: Sliders },
+          { to: '/find-room', label: 'Instant Free Room', icon: Search },
+        ],
+      },
+      {
+        title: 'System & Tools',
+        items: [
+          { to: '/import', label: 'Dataset & Solvers', icon: FileSpreadsheet },
+          { to: '/settings', label: 'Settings & Audit', icon: Settings },
+          { to: '/assistant', label: 'AI Voice & Hinglish', icon: Bot },
+        ],
+      },
+    ];
+  };
+
+  const navGroups = getNavGroups();
 
   return (
     <>
@@ -78,15 +133,17 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         {/* Logo Header */}
         <div className="h-16 px-6 flex items-center justify-between border-b border-slate-100 dark:border-slate-800">
           <div className="flex items-center space-x-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
-              <Compass className="w-5 h-5" />
-            </div>
+            <img
+              src="/logo.jpg"
+              alt="CIT Logo"
+              className="w-10 h-10 rounded-full object-cover shadow-sm ring-2 ring-brand-500/30 bg-white"
+            />
             <div>
               <span className="text-base font-extrabold tracking-tight bg-gradient-to-r from-slate-900 via-indigo-900 to-brand-700 dark:from-white dark:via-slate-200 dark:to-indigo-300 bg-clip-text text-transparent">
                 CIT TTMS
               </span>
               <span className="block text-[10px] text-slate-400 font-semibold tracking-wider uppercase">
-                Chilika Campus
+                Chilika Institute
               </span>
             </div>
           </div>

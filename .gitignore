@@ -49,3 +49,7 @@ dist/
 # OS
 .DS_Store
 Thumbs.db
+
+# Scratch / Local test artifacts
+scratch/
+.pytest_cache/

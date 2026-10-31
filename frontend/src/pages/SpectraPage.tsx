@@ -67,17 +67,24 @@ export const SpectraPage: React.FC = () => {
     <div className="space-y-6 animate-fade-in">
       {/* Hero Banner */}
       <div className="p-8 rounded-3xl bg-gradient-to-r from-purple-600 via-brand-600 to-indigo-800 text-white shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div>
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-            <span>Annual Tech & Cultural Extravaganza</span>
+        <div className="flex items-start sm:items-center space-x-4">
+          <img
+            src="/logo.jpg"
+            alt="CIT Logo"
+            className="w-16 h-16 rounded-full object-cover shadow-lg ring-4 ring-white/30 bg-white shrink-0"
+          />
+          <div>
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold mb-3">
+              <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+              <span>Chilika Institute Annual Tech & Cultural Extravaganza</span>
+            </div>
+            <h1 className="text-3xl font-black tracking-tight">
+              Spectra 2026 Venue Optimization
+            </h1>
+            <p className="text-sm text-purple-100/90 mt-1 max-w-xl">
+              25 student club & department event requests evaluated by OR-Tools CP-SAT with multi-criteria priority weights and conflict evidence.
+            </p>
           </div>
-          <h1 className="text-3xl font-black tracking-tight">
-            Spectra 2026 Venue Optimization
-          </h1>
-          <p className="text-sm text-purple-100/90 mt-1 max-w-xl">
-            25 student club & department event requests evaluated by OR-Tools CP-SAT with multi-criteria priority weights and conflict evidence.
-          </p>
         </div>
 
         <button

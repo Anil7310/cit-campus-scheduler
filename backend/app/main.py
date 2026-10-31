@@ -1,3 +1,5 @@
+import os
+import json
 import logging
 import threading
 from contextlib import asynccontextmanager
@@ -23,6 +25,7 @@ from app.api.dashboard import router as dashboard_router
 from app.api.exports import router as exports_router
 from app.api.admin import router as admin_router
 from app.api.jobs import router as jobs_router
+from app.api.faculty import router as faculty_router
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 logger = logging.getLogger("cit_scheduler.main")
@@ -40,12 +43,26 @@ def _first_boot_pre_generation():
         if not existing:
             logger.info("First boot detected: Pre-generating and publishing baseline timetable...")
             ds = load_default_dataset()
-            from app.scheduler.model_timetable import TimetableSolver
             from app.scheduler.model_exams import ExamScheduler
             from app.scheduler.model_booking import BookingDecisionEngine
 
-            solver = TimetableSolver(ds, time_limit_seconds=45, num_workers=2)
-            status_str, assignments, metrics = solver.solve()
+            assignments = None
+            metrics = None
+            schedule_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "exports", "schedule.json"))
+            if os.path.exists(schedule_path):
+                try:
+                    with open(schedule_path, "r", encoding="utf-8") as f:
+                        export_data = json.load(f)
+                        assignments = export_data.get("timetable", [])
+                        metrics = export_data.get("metadata", {}).get("metrics", {})
+                        logger.info(f"Loaded {len(assignments)} baseline assignments from exports/schedule.json")
+                except Exception as ex:
+                    logger.warning(f"Could not load pre-generated schedule.json: {ex}")
+
+            if not assignments:
+                from app.scheduler.model_timetable import TimetableSolver
+                solver = TimetableSolver(ds, time_limit_seconds=45, num_workers=2)
+                status_str, assignments, metrics = solver.solve()
             if assignments:
                 t_doc = {
                     "version": 1,
@@ -185,6 +202,7 @@ def root():
     }
 
 # Health Check Endpoint (Section 5.1)
+@app.get("/health")
 @app.get("/api/v1/health")
 def health_check():
     db_ok = db_manager.is_connected
@@ -206,7 +224,8 @@ def health_check():
     llm_enabled = bool(settings.LLM_PROVIDER != "none" and settings.LLM_API_KEY)
 
     return {
-        "status": "healthy",
+        "status": "ok",
+        "healthy": True,
         "db": "ok" if db_ok else "in_memory_fallback",
         "dataset_loaded": True,
         "published_timetable_version": pub_ver,
@@ -218,14 +237,17 @@ def health_check():
 api_prefix = "/api/v1"
 app.include_router(auth_router, prefix=api_prefix)
 app.include_router(datasets_router, prefix=api_prefix)
-app.include_router(timetable_router, prefix=api_prefix)
+app.include_router(timetable_router, prefix=api_prefix + "/timetable")
+app.include_router(timetable_router, prefix=api_prefix + "/timetables")
 app.include_router(views_router, prefix=api_prefix)
 app.include_router(exams_router, prefix=api_prefix)
 app.include_router(bookings_router, prefix=api_prefix)
 app.include_router(rescheduling_router, prefix=api_prefix)
 app.include_router(assistant_router, prefix=api_prefix)
-app.include_router(manual_router, prefix=api_prefix)
+app.include_router(manual_router, prefix=api_prefix + "/manual")
+app.include_router(manual_router, prefix=api_prefix + "/manual-assignments")
 app.include_router(dashboard_router, prefix=api_prefix)
 app.include_router(exports_router, prefix=api_prefix)
 app.include_router(admin_router, prefix=api_prefix)
 app.include_router(jobs_router, prefix=api_prefix)
+app.include_router(faculty_router, prefix=api_prefix)

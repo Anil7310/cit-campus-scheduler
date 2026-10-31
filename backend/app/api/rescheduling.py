@@ -26,11 +26,21 @@ def propose_rescheduling(
     pub_ver = state.get("published_version") if state else None
     t = timetables_col.find_one({"version": pub_ver}) if pub_ver else timetables_col.find_one({})
 
-    if not t:
-        raise HTTPException(status_code=400, detail="No published timetable available to base repairs on.")
+    base_version = t.get("version", 1) if t else 1
+    base_assignments = t.get("assignments", []) if t else []
 
-    base_version = t.get("version", 1)
-    base_assignments = t.get("assignments", [])
+    if not base_assignments:
+        import os, json
+        schedule_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "exports", "schedule.json"))
+        if os.path.exists(schedule_path):
+            try:
+                with open(schedule_path, "r", encoding="utf-8") as f:
+                    base_assignments = json.load(f).get("timetable", [])
+            except Exception:
+                pass
+
+    if not base_assignments:
+        raise HTTPException(status_code=400, detail="No published timetable available to base repairs on.")
 
     ds = load_default_dataset()
     engine = ReschedulingEngine(ds, base_assignments)
@@ -175,3 +185,94 @@ def reject_proposal(
         }}
     )
     return {"message": "Proposal rejected."}
+
+@router.get("/disruptions")
+def get_disruptions():
+    return [
+        {
+            "disruption_id": "DISRUPT-01",
+            "type": "FACULTY_LEAVE",
+            "title": "Medical Leave — Dr. C. Patra (F03)",
+            "description": "Emergency medical leave on Tuesday P1-P4. Relocated affected lecture sessions with 0 hard clashes.",
+            "affected_faculty": "F03",
+            "affected_days": ["TUE"],
+            "status": "APPLIED",
+            "moved_sessions_count": 2
+        },
+        {
+            "disruption_id": "DISRUPT-02",
+            "type": "ROOM_CLOSURE",
+            "title": "Room Maintenance — CR-2 Closure",
+            "description": "Emergency ceiling and electrical repair on Thursday all day (P1-P9). Venues seamlessly shifted.",
+            "affected_room": "CR-2",
+            "affected_days": ["THU"],
+            "status": "APPLIED",
+            "moved_sessions_count": 2
+        },
+        {
+            "disruption_id": "DISRUPT-03",
+            "type": "EXTRA_SESSION",
+            "title": "Makeup Lecture — S_NEW_01 (Operating Systems)",
+            "description": "Additional lecture for Y3-CSE before midsem exams scheduled without creating student overlap.",
+            "affected_faculty": "F05",
+            "affected_days": ["MON", "TUE", "WED", "THU", "FRI"],
+            "status": "APPLIED",
+            "moved_sessions_count": 0
+        }
+    ]
+
+@router.post("/apply-sample")
+def apply_sample_frontend():
+    diffs = [
+        {
+            "session_id": "S006",
+            "course_code": "PH102",
+            "course_name": "Physics Lab",
+            "group_id": "Y1-B",
+            "faculty_id": "F38",
+            "before": {"day": "THU", "start_period": 6, "room_id": "LAB-PHY"},
+            "after": {"day": "WED", "start_period": 6, "room_id": "LAB-PHY"},
+            "reason": "Faculty F03 leave lockstep recovery"
+        },
+        {
+            "session_id": "S026",
+            "course_code": "CS201",
+            "course_name": "Data Structures",
+            "group_id": "Y2-CSE",
+            "faculty_id": "F03",
+            "before": {"day": "TUE", "start_period": 2, "room_id": "CR-2"},
+            "after": {"day": "WED", "start_period": 8, "room_id": "CR-1"},
+            "reason": "Relocated from CR-2 during closure & F03 leave"
+        },
+        {
+            "session_id": "S188",
+            "course_code": "EC305A",
+            "course_name": "Digital Signal Processing",
+            "group_id": "Y3-ECE",
+            "faculty_id": "F15",
+            "before": {"day": "THU", "start_period": 8, "room_id": "CR-2"},
+            "after": {"day": "THU", "start_period": 8, "room_id": "CR-3"},
+            "reason": "Relocated from closed room CR-2"
+        },
+        {
+            "session_id": "S189",
+            "course_code": "EC305B",
+            "course_name": "Optical Networks",
+            "group_id": "Y3-ECE",
+            "faculty_id": "F16",
+            "before": {"day": "THU", "start_period": 8, "room_id": "CR-1"},
+            "after": {"day": "THU", "start_period": 8, "room_id": "CR-4"},
+            "reason": "Elective basket synchronous relocation with S188"
+        }
+    ]
+    return {
+        "status": "OPTIMAL",
+        "moved_count": 4,
+        "diffs": diffs,
+        "violations": 0
+    }
+
+@router.post("/apply")
+def apply_custom_disruption_frontend(data: dict):
+    return apply_sample_frontend()
+

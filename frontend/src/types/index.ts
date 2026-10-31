@@ -8,7 +8,7 @@ export interface User {
   department?: string;
 }
 
-export type DayOfWeek = 'MON' | 'TUE' | 'WED' | 'THU' | 'FRI';
+export type DayOfWeek = 'MON' | 'TUE' | 'WED' | 'THU' | 'FRI' | 'SAT' | 'SUN';
 
 export interface TimetableSession {
   session_id: string;
@@ -109,7 +109,7 @@ export interface Disruption {
 }
 
 export interface AssistantProposal {
-  action: 'BOOKING' | 'RESCHEDULE' | 'QUERY';
+  action: 'BOOKING' | 'RESCHEDULE' | 'WEEKEND_EXTRA' | 'COORDINATOR_MOVE' | 'QUERY' | string;
   title: string;
   parsed: Record<string, any>;
   feasible: boolean;
@@ -117,9 +117,10 @@ export interface AssistantProposal {
   hard_violations?: string[];
   recommended_slot?: {
     room_id: string;
-    day: DayOfWeek;
+    day: DayOfWeek | string;
     start_period: number;
   };
+  proposal_data?: Record<string, any>;
 }
 
 export interface SolverJob {

@@ -129,7 +129,13 @@ class Dataset:
         ]
         self.bookings_by_id: Dict[str, BookingRequest] = {b.id: b for b in self.booking_requests}
 
-def load_default_dataset() -> Dataset:
+_DATASET_CACHE: Optional[Dataset] = None
+
+def load_default_dataset(force_reload: bool = False) -> Dataset:
+    global _DATASET_CACHE
+    if _DATASET_CACHE is not None and not force_reload:
+        return _DATASET_CACHE
+
     # Look in backend seed_data, data/, or starter-pack/
     possible_paths = [
         os.path.join(os.path.dirname(__file__), "..", "seed_data", "cit_public.json"),
@@ -142,5 +148,6 @@ def load_default_dataset() -> Dataset:
         if os.path.exists(path):
             with open(path, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                return Dataset(data)
+                _DATASET_CACHE = Dataset(data)
+                return _DATASET_CACHE
     raise FileNotFoundError("cit_public.json could not be found in any expected location.")

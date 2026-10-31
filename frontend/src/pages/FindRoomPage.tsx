@@ -14,7 +14,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-const DAYS: DayOfWeek[] = ['MON', 'TUE', 'WED', 'THU', 'FRI'];
+const DAYS: DayOfWeek[] = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
 const PERIODS = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const PERIOD_TIMES: Record<number, string> = {

@@ -16,6 +16,9 @@ import { AssistantPage } from './pages/AssistantPage';
 import { ManualSchedulingPage } from './pages/ManualSchedulingPage';
 import { DataImportPage } from './pages/DataImportPage';
 import { SettingsPage } from './pages/SettingsPage';
+import { SubjectsPage } from './pages/SubjectsPage';
+
+import { FacultyPortalPage } from './pages/FacultyPortalPage';
 
 export const App: React.FC = () => {
   return (
@@ -27,6 +30,8 @@ export const App: React.FC = () => {
 
             <Route element={<AppLayout />}>
               <Route path="/" element={<DashboardPage />} />
+              <Route path="/subjects" element={<SubjectsPage />} />
+              <Route path="/faculty" element={<FacultyPortalPage />} />
               <Route path="/timetable" element={<TimetablePage />} />
               <Route path="/find-room" element={<FindRoomPage />} />
               <Route path="/exams" element={<ExamsPage />} />

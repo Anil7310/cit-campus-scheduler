@@ -9,7 +9,7 @@ export const ApiStatusBanner: React.FC = () => {
   const checkStatus = async () => {
     try {
       const res = await api.checkHealth();
-      if (res && res.status === 'ok') {
+      if (res && (res.status === 'ok' || res.status === 'healthy')) {
         setStatus('connected');
         setTimeout(() => setShow(false), 2500);
       } else {

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { api } from '../services/api';
+import { useAuth } from '../context/AuthContext';
 import { TimetableSession, Room, DayOfWeek } from '../types';
 import {
   Sliders,
@@ -11,13 +12,19 @@ import {
   Calendar,
   Clock,
   Sparkles,
-  RefreshCw
+  RefreshCw,
+  ShieldAlert,
+  SendHorizontal
 } from 'lucide-react';
 
 const DAYS: DayOfWeek[] = ['MON', 'TUE', 'WED', 'THU', 'FRI'];
 const PERIODS = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export const ManualSchedulingPage: React.FC = () => {
+  const { user } = useAuth();
+  const isCoordinator = user?.role === 'coordinator';
+  const coordDept = (user?.department || 'CSE').toUpperCase();
+
   const [sessions, setSessions] = useState<TimetableSession[]>([]);
   const [rooms, setRooms] = useState<Room[]>([]);
   const [loading, setLoading] = useState(true);
@@ -27,6 +34,20 @@ export const ManualSchedulingPage: React.FC = () => {
   const [targetDay, setTargetDay] = useState<DayOfWeek>('MON');
   const [targetPeriod, setTargetPeriod] = useState<number>(1);
   const [targetRoom, setTargetRoom] = useState<string>('CR-1');
+
+  // Filtered sessions for coordinator
+  const displaySessions = useMemo(() => {
+    if (!isCoordinator) return sessions;
+    return sessions.filter((s) => {
+      const code = s.course_code.toUpperCase();
+      const group = s.group_id.toUpperCase();
+      return (
+        code.startsWith(coordDept) ||
+        group.includes(coordDept) ||
+        (coordDept === 'CSE' && code.startsWith('CS'))
+      );
+    });
+  }, [sessions, isCoordinator, coordDept]);
 
   // Validation results
   const [validating, setValidating] = useState(false);
@@ -47,13 +68,27 @@ export const ManualSchedulingPage: React.FC = () => {
           api.getSchedule(),
           api.getRooms(),
         ]);
-        setSessions(sched.sessions || []);
+        const allSessions: TimetableSession[] = sched.sessions || [];
+        setSessions(allSessions);
         setRooms(rList || []);
-        if (sched.sessions?.length > 0) {
-          setSelectedSessionId(sched.sessions[0].session_id);
-          setTargetDay(sched.sessions[0].day);
-          setTargetPeriod(sched.sessions[0].start_period);
-          setTargetRoom(sched.sessions[0].room_id);
+
+        const validInitial = isCoordinator
+          ? allSessions.filter((s) => {
+              const code = s.course_code.toUpperCase();
+              const group = s.group_id.toUpperCase();
+              return (
+                code.startsWith(coordDept) ||
+                group.includes(coordDept) ||
+                (coordDept === 'CSE' && code.startsWith('CS'))
+              );
+            })
+          : allSessions;
+
+        if (validInitial.length > 0) {
+          setSelectedSessionId(validInitial[0].session_id);
+          setTargetDay(validInitial[0].day);
+          setTargetPeriod(validInitial[0].start_period);
+          setTargetRoom(validInitial[0].room_id);
         }
       } catch (e) {
         console.error(e);
@@ -62,7 +97,7 @@ export const ManualSchedulingPage: React.FC = () => {
       }
     };
     load();
-  }, []);
+  }, [isCoordinator, coordDept]);
 
   const activeSession = sessions.find((s) => s.session_id === selectedSessionId);
 
@@ -100,13 +135,19 @@ export const ManualSchedulingPage: React.FC = () => {
     setCommitting(true);
     setCommitMessage(null);
     try {
-      await api.commitManualMove({
+      const res: any = await api.commitManualMove({
         session_id: selectedSessionId,
         new_day: targetDay,
         new_start_period: targetPeriod,
         new_room_id: targetRoom,
       });
-      setCommitMessage(`Session ${selectedSessionId} successfully moved!`);
+
+      if (res.requires_admin_approval) {
+        setCommitMessage(`📋 ${res.message} (Request ID: ${res.request?.request_id || 'COORD_REQ'}, Status: PENDING_ADMIN_APPROVAL)`);
+      } else {
+        setCommitMessage(`Session ${selectedSessionId} successfully moved and published!`);
+      }
+
       // Refresh schedule
       const sched = await api.getSchedule();
       setSessions(sched.sessions || []);
@@ -134,12 +175,25 @@ export const ManualSchedulingPage: React.FC = () => {
         </p>
       </div>
 
+      {/* Coordinator Scope Notification */}
+      {isCoordinator && (
+        <div className="p-3.5 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800 flex items-center justify-between text-xs text-indigo-900 dark:text-indigo-200">
+          <div className="flex items-center space-x-2 font-semibold">
+            <ShieldAlert className="w-4 h-4 text-indigo-600 dark:text-indigo-400 shrink-0" />
+            <span>🏛️ Department Coordinator View: Scoped strictly to {coordDept} sessions. Relocations will be submitted to Administrator for approval.</span>
+          </div>
+          <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-200/60 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-300">
+            {coordDept} Department
+          </span>
+        </div>
+      )}
+
       {/* Editor Card */}
       <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6">
         {/* Step 1: Pick Session */}
         <div>
           <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
-            1. Select Session to Relocate
+            1. Select Session to Relocate {isCoordinator ? `(${coordDept} Department)` : ''}
           </label>
           <select
             value={selectedSessionId}
@@ -154,7 +208,7 @@ export const ManualSchedulingPage: React.FC = () => {
             }}
             className="w-full px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-xs font-semibold text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-brand-500"
           >
-            {sessions.map((s) => (
+            {displaySessions.map((s) => (
               <option key={s.session_id} value={s.session_id}>
                 {s.session_id}: {s.course_code} ({s.type}) • Group: {s.group_id} • Faculty: {s.faculty_id} [Currently: {s.day} P{s.start_period} in {s.room_id}]
               </option>
@@ -286,10 +340,15 @@ export const ManualSchedulingPage: React.FC = () => {
           <button
             onClick={handleCommitMove}
             disabled={!validationResult?.is_valid || committing}
-            className="px-6 py-3 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs transition-colors flex items-center space-x-2 disabled:opacity-40 shadow-lg shadow-brand-500/20"
+            className="px-6 py-3 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs transition-colors flex items-center space-x-2 disabled:opacity-40 shadow-lg shadow-brand-500/20 active:scale-95"
           >
             {committing ? (
               <RefreshCw className="w-4 h-4 animate-spin" />
+            ) : isCoordinator ? (
+              <>
+                <SendHorizontal className="w-4 h-4" />
+                <span>Submit Relocation Request to Admin</span>
+              </>
             ) : (
               <>
                 <ShieldCheck className="w-4 h-4" />

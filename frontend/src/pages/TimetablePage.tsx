@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { api } from '../services/api';
+import { useAuth } from '../context/AuthContext';
 import { TimetableSession, StudentGroup, Faculty, Room, DayOfWeek } from '../types';
 import { ExplainModal } from '../components/ExplainModal';
 import {
@@ -13,7 +14,8 @@ import {
   Info,
   Clock,
   CheckCircle,
-  AlertCircle
+  AlertCircle,
+  ShieldAlert
 } from 'lucide-react';
 
 const DAYS: DayOfWeek[] = ['MON', 'TUE', 'WED', 'THU', 'FRI'];
@@ -32,11 +34,30 @@ const PERIOD_TIMES: Record<number, string> = {
 };
 
 export const TimetablePage: React.FC = () => {
+  const { user } = useAuth();
+  const isCoordinator = user?.role === 'coordinator';
+  const coordDept = (user?.department || 'CSE').toUpperCase();
+
   const [sessions, setSessions] = useState<TimetableSession[]>([]);
   const [groups, setGroups] = useState<StudentGroup[]>([]);
   const [faculty, setFaculty] = useState<Faculty[]>([]);
   const [rooms, setRooms] = useState<Room[]>([]);
   const [loading, setLoading] = useState(true);
+
+  // Department-scoped collections for coordinator
+  const scopedGroups = useMemo(() => {
+    if (!isCoordinator) return groups;
+    return groups.filter(
+      (g) =>
+        g.department?.toUpperCase() === coordDept ||
+        g.group_id?.toUpperCase().includes(coordDept)
+    );
+  }, [groups, isCoordinator, coordDept]);
+
+  const scopedFaculty = useMemo(() => {
+    if (!isCoordinator) return faculty;
+    return faculty.filter((f) => f.department?.toUpperCase() === coordDept);
+  }, [faculty, isCoordinator, coordDept]);
 
   // Filters & State
   const [viewMode, setViewMode] = useState<'group' | 'faculty' | 'room'>('group');
@@ -60,13 +81,26 @@ export const TimetablePage: React.FC = () => {
         setGroups(gList);
         setFaculty(fList);
         setRooms(rList);
-        if (gList.length > 0) setSelectedEntity(gList[0].group_id);
+
+        const initialGroups = isCoordinator
+          ? gList.filter(
+              (g) =>
+                g.department?.toUpperCase() === coordDept ||
+                g.group_id?.toUpperCase().includes(coordDept)
+            )
+          : gList;
+
+        if (initialGroups.length > 0) {
+          setSelectedEntity(initialGroups[0].group_id);
+        } else if (gList.length > 0) {
+          setSelectedEntity(gList[0].group_id);
+        }
       } catch (e) {
         console.error(e);
       }
     };
     loadResources();
-  }, []);
+  }, [isCoordinator, coordDept]);
 
   // Fetch sessions based on scheduleType
   useEffect(() => {
@@ -90,8 +124,8 @@ export const TimetablePage: React.FC = () => {
   // Update selected entity when viewMode changes
   const handleViewModeChange = (mode: 'group' | 'faculty' | 'room') => {
     setViewMode(mode);
-    if (mode === 'group' && groups.length > 0) setSelectedEntity(groups[0].group_id);
-    else if (mode === 'faculty' && faculty.length > 0) setSelectedEntity(faculty[0].faculty_id);
+    if (mode === 'group' && scopedGroups.length > 0) setSelectedEntity(scopedGroups[0].group_id);
+    else if (mode === 'faculty' && scopedFaculty.length > 0) setSelectedEntity(scopedFaculty[0].faculty_id);
     else if (mode === 'room' && rooms.length > 0) setSelectedEntity(rooms[0].room_id);
   };
 
@@ -186,6 +220,19 @@ export const TimetablePage: React.FC = () => {
         </div>
       </div>
 
+      {/* Coordinator Scope Notification */}
+      {isCoordinator && (
+        <div className="p-3.5 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800 flex items-center justify-between text-xs text-indigo-900 dark:text-indigo-200">
+          <div className="flex items-center space-x-2 font-semibold">
+            <ShieldAlert className="w-4 h-4 text-indigo-600 dark:text-indigo-400 shrink-0" />
+            <span>🏛️ Department Coordinator Scope: Scoped strictly to {coordDept} batches and faculty. Schedule edits require Admin approval.</span>
+          </div>
+          <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-200/60 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-300">
+            {coordDept} Department
+          </span>
+        </div>
+      )}
+
       {/* Control Bar: View Mode, Entity Dropdown, Filter, Export */}
       <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm flex flex-wrap items-center justify-between gap-4">
         {/* Mode Tabs */}
@@ -238,13 +285,13 @@ export const TimetablePage: React.FC = () => {
             className="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-xs font-semibold text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-brand-500"
           >
             {viewMode === 'group' &&
-              groups.map((g) => (
+              scopedGroups.map((g) => (
                 <option key={g.group_id} value={g.group_id}>
                   {g.name} ({g.department} Y{g.year} - {g.strength} students)
                 </option>
               ))}
             {viewMode === 'faculty' &&
-              faculty.map((f) => (
+              scopedFaculty.map((f) => (
                 <option key={f.faculty_id} value={f.faculty_id}>
                   {f.faculty_id}: {f.name} ({f.department})
                 </option>

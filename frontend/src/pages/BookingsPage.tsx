@@ -10,6 +10,7 @@ import {
   CheckCircle2,
   XCircle,
   AlertTriangle,
+  AlertCircle,
   Clock,
   Building2,
   Calendar,
@@ -17,7 +18,7 @@ import {
   Mic
 } from 'lucide-react';
 
-const DAYS: DayOfWeek[] = ['MON', 'TUE', 'WED', 'THU', 'FRI'];
+const DAYS: DayOfWeek[] = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
 const PERIODS = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export const BookingsPage: React.FC = () => {
@@ -41,6 +42,10 @@ export const BookingsPage: React.FC = () => {
   const [submitting, setSubmitting] = useState(false);
   const [actionError, setActionError] = useState<string | null>(null);
   const [actionSuccess, setActionSuccess] = useState<string | null>(null);
+
+  // Availability Pre-check
+  const [availability, setAvailability] = useState<{ is_available: boolean; reason: string } | null>(null);
+  const [checkingAvailability, setCheckingAvailability] = useState(false);
 
   // Natural language input
   const [promptInput, setPromptInput] = useState('');
@@ -83,6 +88,34 @@ export const BookingsPage: React.FC = () => {
   useEffect(() => {
     loadData();
   }, []);
+
+  // Pre-submission availability check
+  useEffect(() => {
+    if (!requestedRoom || !day || !startPeriod) return;
+
+    let isMounted = true;
+    setCheckingAvailability(true);
+    api
+      .checkBookingAvailability({
+        day,
+        start_period: startPeriod,
+        duration,
+        room_id: requestedRoom,
+      })
+      .then((res: any) => {
+        if (isMounted) setAvailability(res);
+      })
+      .catch((err) => {
+        console.error('Availability check failed:', err);
+      })
+      .finally(() => {
+        if (isMounted) setCheckingAvailability(false);
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [requestedRoom, day, startPeriod, duration]);
 
   const handleCreateStructured = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -359,14 +392,46 @@ export const BookingsPage: React.FC = () => {
               <div className="flex items-end">
                 <button
                   type="submit"
-                  disabled={submitting}
-                  className="w-full py-2.5 px-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-xs transition-colors flex items-center justify-center space-x-1.5 shadow-md shadow-brand-500/20 disabled:opacity-50"
+                  disabled={submitting || (availability !== null && !availability.is_available)}
+                  className={`w-full py-2.5 px-4 rounded-xl text-white font-semibold text-xs transition-colors flex items-center justify-center space-x-1.5 shadow-md ${
+                    availability && !availability.is_available
+                      ? 'bg-slate-400 cursor-not-allowed opacity-60'
+                      : 'bg-brand-600 hover:bg-brand-700 shadow-brand-500/20'
+                  }`}
                 >
                   <Send className="w-3.5 h-3.5" />
-                  <span>Submit Request</span>
+                  <span>
+                    {availability && !availability.is_available
+                      ? 'Room Not Available'
+                      : 'Submit Request to Admin'}
+                  </span>
                 </button>
               </div>
             </div>
+
+            {/* Live Availability Pre-Check Status Banner */}
+            {checkingAvailability ? (
+              <div className="p-3 bg-slate-100 dark:bg-slate-800 rounded-xl text-xs text-slate-500 flex items-center space-x-2">
+                <Clock className="w-4 h-4 animate-spin text-brand-500" />
+                <span>Checking room vacancy against master semester timetable...</span>
+              </div>
+            ) : availability ? (
+              availability.is_available ? (
+                <div className="p-3 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-xl flex items-center space-x-2 text-emerald-800 dark:text-emerald-200 text-xs">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>
+                    <strong>Available & Clash-Free:</strong> Venue <strong>{requestedRoom}</strong> is completely free on {day} Period {startPeriod} ({duration}h). Verified against all academic lectures and exams. Ready to request!
+                  </span>
+                </div>
+              ) : (
+                <div className="p-3 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 rounded-xl flex items-center space-x-2 text-rose-800 dark:text-rose-200 text-xs">
+                  <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
+                  <span>
+                    <strong>Not Available:</strong> {availability.reason} Please select an alternative venue or time slot before submitting.
+                  </span>
+                </div>
+              )
+            ) : null}
           </form>
         )}
       </div>

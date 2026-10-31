@@ -98,10 +98,16 @@ class ApiService {
   }
 
   // Auth
-  public async login(email: string, password: string): Promise<{ access_token: string; user: User }> {
+  public async login(usernameOrEmail: string, password: string, role?: string): Promise<{ access_token: string; user: User }> {
+    const isEmail = usernameOrEmail.includes('@');
     const res = await this.request<{ access_token: string; user: User }>('/auth/login', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({
+        email: isEmail ? usernameOrEmail : undefined,
+        username: !isEmail ? usernameOrEmail : undefined,
+        password,
+        role: role || undefined
+      }),
     });
     this.setToken(res.access_token);
     return res;
@@ -265,6 +271,124 @@ class ApiService {
 
   public async getAuditLogs(): Promise<any[]> {
     return this.request<any[]>('/admin/audit-logs');
+  }
+
+  // Datasets - Courses / Subjects
+  public async getCourses(): Promise<any[]> {
+    return this.request<any[]>('/datasets/courses');
+  }
+
+  // Faculty Portal Endpoints
+  public async getFacultyProfile(): Promise<any> {
+    return this.request<any>('/faculty/profile');
+  }
+
+  public async getFacultySchedule(): Promise<any> {
+    return this.request<any>('/faculty/my-schedule');
+  }
+
+  public async modifyLecture(data: {
+    session_id: string;
+    action: 'CANCEL' | 'RESCHEDULE';
+    reason: string;
+    target_day?: string;
+    target_period?: number;
+    target_room?: string;
+  }): Promise<any> {
+    return this.request<any>('/faculty/lecture-action', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  }
+
+  public async requestWeekendLecture(data: {
+    subject_code: string;
+    day: string;
+    start_period: number;
+    duration: number;
+    room_id?: string;
+    reason: string;
+  }): Promise<any> {
+    return this.request<any>('/faculty/weekend-request', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  }
+
+  public async getFacultyRequests(): Promise<any> {
+    return this.request<any>('/faculty/requests');
+  }
+
+  // Vacant Slots Finder for Student Batch
+  public async getVacantSlots(params: {
+    group_id: string;
+    session_type?: string;
+    duration?: number;
+    day?: string;
+  }): Promise<{
+    group_id: string;
+    faculty_id: string;
+    session_type: string;
+    duration: number;
+    vacant_slots_count: number;
+    vacant_slots: any[];
+  }> {
+    const query = new URLSearchParams(params as any).toString();
+    return this.request(`/faculty/vacant-slots?${query}`);
+  }
+
+  // Admin User & Member Management
+  public async getSystemUsers(): Promise<any[]> {
+    return this.request<any[]>('/admin/users');
+  }
+
+  public async createSystemUser(data: {
+    username: string;
+    name: string;
+    email?: string;
+    role: string;
+    department: string;
+    faculty_id?: string;
+    qualifications?: string[];
+    fields_of_interest?: string[];
+    password: string;
+  }): Promise<any> {
+    return this.request<any>('/admin/users', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  }
+
+  // Pre-submission availability check
+  public async checkBookingAvailability(params: {
+    day: string;
+    start_period: number | string;
+    duration: number;
+    room_id: string;
+  }): Promise<{ is_available: boolean; reason: string; room_id: string; day: string }> {
+    const query = new URLSearchParams(params as any).toString();
+    return this.request<any>(`/bookings/check-availability?${query}`);
+  }
+
+  // Admin Pending Approvals & Requests Hub
+  public async getAdminPendingRequests(): Promise<{
+    total_requests: number;
+    pending_count: number;
+    requests: any[];
+  }> {
+    return this.request<any>('/admin/pending-requests');
+  }
+
+  public async decideAdminRequest(data: {
+    request_id: string;
+    request_type: string;
+    decision: 'APPROVED' | 'REJECTED';
+    reason?: string;
+  }): Promise<any> {
+    return this.request<any>('/admin/decide-request', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
   }
 
   public async getExportJson(type: 'schedule' | 'schedule_after'): Promise<any> {

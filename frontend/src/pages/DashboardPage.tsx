@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import { api } from '../services/api';
 import { DashboardStats } from '../types';
 import {
@@ -15,7 +16,9 @@ import {
   AlertTriangle,
   Search,
   BookmarkCheck,
-  Layers
+  Layers,
+  XCircle,
+  RefreshCw
 } from 'lucide-react';
 import {
   BarChart,
@@ -30,10 +33,56 @@ import {
 } from 'recharts';
 
 export const DashboardPage: React.FC = () => {
+  const { user } = useAuth();
   const [stats, setStats] = useState<DashboardStats | null>(null);
   const [loading, setLoading] = useState(true);
 
+  // Live Requests & Approvals
+  const [adminRequests, setAdminRequests] = useState<any[]>([]);
+  const [loadingRequests, setLoadingRequests] = useState<boolean>(false);
+  const [decidingId, setDecidingId] = useState<string | null>(null);
+
+  if (user?.role === 'faculty') {
+    return <Navigate to="/faculty" replace />;
+  }
+  if (user?.role === 'club') {
+    return <Navigate to="/spectra" replace />;
+  }
+
+  const fetchAdminRequests = async () => {
+    setLoadingRequests(true);
+    try {
+      const res = await api.getAdminPendingRequests();
+      setAdminRequests(res.requests || []);
+    } catch (err) {
+      console.error('Error fetching admin requests:', err);
+    } finally {
+      setLoadingRequests(false);
+    }
+  };
+
+  const handleDecideRequest = async (
+    requestId: string,
+    requestType: string,
+    decision: 'APPROVED' | 'REJECTED'
+  ) => {
+    setDecidingId(requestId);
+    try {
+      await api.decideAdminRequest({
+        request_id: requestId,
+        request_type: requestType,
+        decision,
+      });
+      await fetchAdminRequests();
+    } catch (err: any) {
+      console.error('Failed to decide request:', err);
+    } finally {
+      setDecidingId(null);
+    }
+  };
+
   useEffect(() => {
+    fetchAdminRequests();
     api
       .getDashboardStats()
       .then((data) => setStats(data))
@@ -83,18 +132,33 @@ export const DashboardPage: React.FC = () => {
   return (
     <div className="space-y-8 animate-fade-in">
       {/* Top Banner: Verification Gates Status */}
-      <div className="p-6 rounded-3xl bg-gradient-to-r from-brand-600 via-indigo-600 to-indigo-800 text-white shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-        <div>
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold mb-2">
-            <ShieldCheck className="w-3.5 h-3.5 text-emerald-300" />
-            <span>Benchmark Solver Status: PASSING ALL GATES</span>
+      <div className="p-6 rounded-3xl bg-gradient-to-r from-brand-600 via-indigo-600 to-indigo-800 text-white shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+        <div className="flex items-start sm:items-center space-x-4">
+          <img
+            src="/logo.jpg"
+            alt="CIT Logo"
+            className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover shadow-lg ring-4 ring-white/30 bg-white shrink-0"
+          />
+          <div>
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold mb-2">
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-300" />
+              <span>
+                {user?.role === 'coordinator'
+                  ? `Department-Scoped Mode (${(user.department || 'CSE').toUpperCase()} HOD)`
+                  : 'Benchmark Solver Status: PASSING ALL GATES'}
+              </span>
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+              {user?.role === 'coordinator'
+                ? `${(user.department || 'CSE').toUpperCase()} Department Coordinator Hub`
+                : 'Chilika Institute of Technology TTMS'}
+            </h1>
+            <p className="text-sm text-indigo-100/90 mt-1 max-w-2xl">
+              {user?.role === 'coordinator'
+                ? `Operational console for ${(user.department || 'CSE').toUpperCase()} Department. You have exclusive oversight of your department's sessions, faculty, and student groups. Schedule adjustments are submitted to the Dean & Administrator for final approval.`
+                : 'Spring 2026 scheduling engine active. Verified with official validator: 0 hard constraint clashes across 189 sessions and 41 midsem exams.'}
+            </p>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-            Chilika Institute of Technology TTMS
-          </h1>
-          <p className="text-sm text-indigo-100/90 mt-1 max-w-2xl">
-            Spring 2026 scheduling engine active. Verified with official validator: 0 hard constraint clashes across 189 sessions and 41 midsem exams.
-          </p>
         </div>
 
         <div className="flex flex-wrap gap-2 shrink-0">
@@ -183,6 +247,140 @@ export const DashboardPage: React.FC = () => {
             Anti-self-approval active
           </div>
         </div>
+      </div>
+
+      {/* Live Institutional Approvals & Requests Hub (Admin & Coordinator) */}
+      <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
+          <div>
+            <div className="flex items-center space-x-2">
+              <Sparkles className="w-4 h-4 text-brand-500" />
+              <h2 className="text-base font-bold text-slate-900 dark:text-white">
+                Live Institutional Approvals & Requests Hub
+              </h2>
+            </div>
+            <p className="text-xs text-slate-400 mt-0.5">
+              Incoming faculty lecture changes, extra weekend class requests, and club venue reservations
+            </p>
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+              {adminRequests.filter((r) => String(r.status || '').includes('PEND')).length} Pending Review
+            </span>
+            <button
+              onClick={fetchAdminRequests}
+              disabled={loadingRequests}
+              className="p-1.5 rounded-lg text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+            >
+              <RefreshCw className={`w-3.5 h-3.5 ${loadingRequests ? 'animate-spin' : ''}`} />
+            </button>
+          </div>
+        </div>
+
+        {loadingRequests ? (
+          <div className="p-8 text-center text-xs text-slate-400">
+            <RefreshCw className="w-5 h-5 animate-spin text-brand-500 mx-auto mb-2" />
+            Loading incoming requests...
+          </div>
+        ) : adminRequests.length === 0 ? (
+          <div className="p-8 text-center text-xs text-slate-400">
+            No active or pending requests at this time.
+          </div>
+        ) : (
+          <div className="space-y-3 max-h-96 overflow-y-auto pr-1">
+            {adminRequests.map((req) => {
+              const isPending = String(req.status || '').toUpperCase().includes('PEND');
+              const isApproved = String(req.status || '').toUpperCase().includes('APP');
+              const isRejected = String(req.status || '').toUpperCase().includes('REJ');
+
+              let typeColor = 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300';
+              if (req.request_type === 'faculty_action') {
+                typeColor = 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300';
+              } else if (req.request_type === 'weekend_request') {
+                typeColor = 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300';
+              } else if (req.request_type === 'booking') {
+                typeColor = 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300';
+              }
+
+              return (
+                <div
+                  key={req.request_id}
+                  className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs"
+                >
+                  <div className="space-y-1">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase ${typeColor}`}>
+                        {req.request_type.replace('_', ' ')}
+                      </span>
+                      <span className="font-bold text-slate-900 dark:text-white text-xs">
+                        {req.title}
+                      </span>
+                      <span
+                        className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
+                          isApproved
+                            ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20'
+                            : isRejected
+                            ? 'bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20'
+                            : 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 animate-pulse'
+                        }`}
+                      >
+                        {req.status}
+                      </span>
+                    </div>
+
+                    <div className="text-slate-500 text-[11px] flex flex-wrap gap-x-3 gap-y-0.5">
+                      <span>Requester: <strong>{req.requester_name}</strong></span>
+                      {req.day && <span>Day: <strong>{req.day}</strong></span>}
+                      {req.period && <span>Slot: <strong>{req.period}</strong></span>}
+                      {req.room && <span>Room: <strong>{req.room}</strong></span>}
+                    </div>
+
+                    {req.reason && (
+                      <p className="text-[11px] text-slate-600 dark:text-slate-300 italic">
+                        "{req.reason}"
+                      </p>
+                    )}
+                  </div>
+
+                  {isPending && (
+                    <div className="flex items-center space-x-2 shrink-0">
+                      {user?.role === 'admin' ? (
+                        <>
+                          <button
+                            onClick={() =>
+                              handleDecideRequest(req.request_id, req.request_type, 'APPROVED')
+                            }
+                            disabled={decidingId === req.request_id}
+                            className="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center space-x-1 shadow-sm transition-all active:scale-95"
+                          >
+                            <CheckCircle2 className="w-3.5 h-3.5" />
+                            <span>Approve</span>
+                          </button>
+                          <button
+                            onClick={() =>
+                              handleDecideRequest(req.request_id, req.request_type, 'REJECTED')
+                            }
+                            disabled={decidingId === req.request_id}
+                            className="px-3 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs flex items-center space-x-1 shadow-sm transition-all active:scale-95"
+                          >
+                            <XCircle className="w-3.5 h-3.5" />
+                            <span>Reject</span>
+                          </button>
+                        </>
+                      ) : (
+                        <span className="px-3 py-1 rounded-xl bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-amber-700 dark:text-amber-300 font-semibold text-xs flex items-center space-x-1.5">
+                          <Clock className="w-3.5 h-3.5 text-amber-500" />
+                          <span>Awaiting Admin Sign-Off</span>
+                        </span>
+                      )}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
 
       {/* Visual Charts Section */}

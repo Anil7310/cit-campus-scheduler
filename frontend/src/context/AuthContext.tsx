@@ -6,16 +6,16 @@ interface AuthContextType {
   user: User | null;
   token: string | null;
   loading: boolean;
-  login: (email: string, password: string) => Promise<void>;
-  demoLogin: (role: UserRole) => Promise<void>;
+  login: (usernameOrEmail: string, password: string, role?: string) => Promise<User>;
+  demoLogin: (role: UserRole) => Promise<User>;
   logout: () => void;
 }
 
-const DEMO_CREDENTIALS: Record<UserRole, { email: string; pass: string }> = {
-  admin: { email: 'admin@cit.edu', pass: 'Admin@123' },
-  coordinator: { email: 'coordinator@cit.edu', pass: 'Coord@123' },
-  faculty: { email: 'faculty@cit.edu', pass: 'Faculty@123' },
-  club: { email: 'club@cit.edu', pass: 'Club@123' },
+export const DEMO_CREDENTIALS: Record<UserRole, { username: string; email: string; pass: string; title: string; subtitle: string }> = {
+  admin: { username: 'admin', email: 'admin@cit.edu', pass: 'Admin@123', title: 'System Administrator', subtitle: 'Dean\'s Office (Full control & member creation)' },
+  faculty: { username: 'faculty', email: 'faculty@cit.edu', pass: 'Faculty@123', title: 'Faculty Member', subtitle: 'Dr. A. Sharma (Timetable, reschedule & batch matching)' },
+  coordinator: { username: 'coordinator', email: 'coordinator@cit.edu', pass: 'Coord@123', title: 'Academic Coordinator', subtitle: 'Dr. R. K. Mohapatra (Master Timetable & Operations)' },
+  club: { username: 'club', email: 'club@cit.edu', pass: 'Club@123', title: 'Student Club Lead', subtitle: 'Vikram Seth (Spectra 2026 Fest & Venue Bookings)' },
 };
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -50,22 +50,24 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     initAuth();
   }, []);
 
-  const login = async (email: string, password: string) => {
+  const login = async (usernameOrEmail: string, password: string, role?: string): Promise<User> => {
     setLoading(true);
     try {
-      const res = await api.login(email, password);
+      const res = await api.login(usernameOrEmail, password, role);
       setUser(res.user);
       setToken(res.access_token);
+      return res.user;
     } finally {
       setLoading(false);
     }
   };
 
-  const demoLogin = async (role: UserRole) => {
+  const demoLogin = async (role: UserRole): Promise<User> => {
     const creds = DEMO_CREDENTIALS[role];
     if (creds) {
-      await login(creds.email, creds.pass);
+      return await login(creds.username, creds.pass, role);
     }
+    throw new Error('Invalid demo role');
   };
 
   const logout = () => {
