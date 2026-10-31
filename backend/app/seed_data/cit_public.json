@@ -1,0 +1,5426 @@
+{
+  "metadata": {
+    "institution": "Chilika Institute of Technology",
+    "version": "1.0.0",
+    "academic_year": "2026-2027",
+    "semester": "Odd",
+    "teaching_week": 7
+  },
+  "rooms": [
+    {
+      "id": "AUD",
+      "name": "Main Auditorium",
+      "type": "auditorium",
+      "capacity": 450,
+      "accessible": true,
+      "features": [
+        "projector",
+        "ac",
+        "sound_system",
+        "stage"
+      ],
+      "maintenance_windows": [
+        {
+          "day": "Wed",
+          "start_period": "P8",
+          "end_period": "P9"
+        }
+      ]
+    },
+    {
+      "id": "OAT",
+      "name": "Open Air Theatre",
+      "type": "open_air_theatre",
+      "capacity": 600,
+      "accessible": true,
+      "features": [
+        "stage",
+        "sound_system"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "SH-1",
+      "name": "Seminar Hall 1",
+      "type": "seminar_hall",
+      "capacity": 160,
+      "accessible": true,
+      "features": [
+        "projector",
+        "ac",
+        "sound_system"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "SH-2",
+      "name": "Seminar Hall 2",
+      "type": "seminar_hall",
+      "capacity": 150,
+      "accessible": false,
+      "features": [
+        "projector",
+        "ac",
+        "sound_system"
+      ],
+      "maintenance_windows": [
+        {
+          "day": "Fri",
+          "start_period": "P7",
+          "end_period": "P9"
+        }
+      ]
+    },
+    {
+      "id": "LH-1",
+      "name": "Lecture Hall 1",
+      "type": "lecture_hall",
+      "capacity": 150,
+      "accessible": true,
+      "features": [
+        "projector",
+        "ac"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "LH-2",
+      "name": "Lecture Hall 2",
+      "type": "lecture_hall",
+      "capacity": 150,
+      "accessible": true,
+      "features": [
+        "projector",
+        "ac"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "LH-3",
+      "name": "Lecture Hall 3",
+      "type": "lecture_hall",
+      "capacity": 140,
+      "accessible": false,
+      "features": [
+        "projector",
+        "ac"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "LH-4",
+      "name": "Lecture Hall 4",
+      "type": "lecture_hall",
+      "capacity": 140,
+      "accessible": false,
+      "features": [
+        "projector"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "LH-5",
+      "name": "Lecture Hall 5",
+      "type": "lecture_hall",
+      "capacity": 130,
+      "accessible": true,
+      "features": [
+        "projector",
+        "ac"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "LH-6",
+      "name": "Lecture Hall 6",
+      "type": "lecture_hall",
+      "capacity": 130,
+      "accessible": false,
+      "features": [
+        "projector"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "CR-1",
+      "name": "Classroom 1",
+      "type": "classroom",
+      "capacity": 80,
+      "accessible": true,
+      "features": [
+        "projector"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "CR-2",
+      "name": "Classroom 2",
+      "type": "classroom",
+      "capacity": 80,
+      "accessible": true,
+      "features": [
+        "projector"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "CR-3",
+      "name": "Classroom 3",
+      "type": "classroom",
+      "capacity": 80,
+      "accessible": true,
+      "features": [
+        "projector"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "CR-4",
+      "name": "Classroom 4",
+      "type": "classroom",
+      "capacity": 80,
+      "accessible": false,
+      "features": [
+        "projector"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "CR-5",
+      "name": "Classroom 5",
+      "type": "classroom",
+      "capacity": 80,
+      "accessible": false,
+      "features": [
+        "projector"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "CR-6",
+      "name": "Classroom 6",
+      "type": "classroom",
+      "capacity": 80,
+      "accessible": false,
+      "features": [
+        "projector"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "CR-7",
+      "name": "Classroom 7",
+      "type": "classroom",
+      "capacity": 75,
+      "accessible": true,
+      "features": [
+        "projector"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "CR-8",
+      "name": "Classroom 8",
+      "type": "classroom",
+      "capacity": 75,
+      "accessible": false,
+      "features": [
+        "projector"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "CR-9",
+      "name": "Classroom 9",
+      "type": "classroom",
+      "capacity": 75,
+      "accessible": false,
+      "features": [
+        "projector"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "CR-10",
+      "name": "Classroom 10",
+      "type": "classroom",
+      "capacity": 75,
+      "accessible": false,
+      "features": [
+        "projector"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "LAB-CS1",
+      "name": "Computing Lab 1",
+      "type": "computer_lab",
+      "capacity": 80,
+      "accessible": true,
+      "features": [
+        "computers",
+        "ac",
+        "projector"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "LAB-CS2",
+      "name": "Computing Lab 2",
+      "type": "computer_lab",
+      "capacity": 80,
+      "accessible": false,
+      "features": [
+        "computers",
+        "ac",
+        "projector"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "LAB-PHY",
+      "name": "Physics Laboratory",
+      "type": "physics_lab",
+      "capacity": 75,
+      "accessible": true,
+      "features": [
+        "dark_room",
+        "optical_benches"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "LAB-CHE",
+      "name": "Chemistry Laboratory",
+      "type": "chemistry_lab",
+      "capacity": 75,
+      "accessible": true,
+      "features": [
+        "fume_hoods"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "LAB-EE",
+      "name": "Electrical Machines Lab",
+      "type": "electrical_lab",
+      "capacity": 75,
+      "accessible": false,
+      "features": [
+        "workbenches",
+        "oscilloscopes"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "LAB-ME",
+      "name": "Mechanical Workshop",
+      "type": "mechanical_lab",
+      "capacity": 75,
+      "accessible": true,
+      "features": [
+        "lathes",
+        "cnc"
+      ],
+      "maintenance_windows": []
+    },
+    {
+      "id": "LAB-CE",
+      "name": "Civil Survey & Material Lab",
+      "type": "civil_lab",
+      "capacity": 75,
+      "accessible": true,
+      "features": [
+        "utm_machine"
+      ],
+      "maintenance_windows": []
+    }
+  ],
+  "faculty": [
+    {
+      "id": "F01",
+      "name": "Dr. A. Sharma",
+      "department": "CSE",
+      "daily_limit_hours": 4,
+      "unavailability": [
+        {
+          "day": "Mon",
+          "periods": [
+            "P1",
+            "P2"
+          ]
+        },
+        {
+          "day": "Fri",
+          "periods": [
+            "P8",
+            "P9"
+          ]
+        }
+      ],
+      "avoid_periods": [
+        "P1",
+        "P9"
+      ]
+    },
+    {
+      "id": "F02",
+      "name": "Dr. B. Das",
+      "department": "CSE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": []
+    },
+    {
+      "id": "F03",
+      "name": "Prof. C. Patra",
+      "department": "CSE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": []
+    },
+    {
+      "id": "F04",
+      "name": "Dr. D. Sen",
+      "department": "CSE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": [
+        "P1"
+      ]
+    },
+    {
+      "id": "F05",
+      "name": "Prof. E. Naik",
+      "department": "CSE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": [
+        "P9"
+      ]
+    },
+    {
+      "id": "F06",
+      "name": "Dr. F. Mohanty",
+      "department": "CSE",
+      "daily_limit_hours": 4,
+      "unavailability": [
+        {
+          "day": "Mon",
+          "periods": [
+            "P1",
+            "P2"
+          ]
+        }
+      ],
+      "avoid_periods": []
+    },
+    {
+      "id": "F07",
+      "name": "Dr. G. Mishra",
+      "department": "CSE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": [
+        "P1"
+      ]
+    },
+    {
+      "id": "F08",
+      "name": "Prof. H. Sahoo",
+      "department": "CSE",
+      "daily_limit_hours": 4,
+      "unavailability": [
+        {
+          "day": "Fri",
+          "periods": [
+            "P8",
+            "P9"
+          ]
+        }
+      ],
+      "avoid_periods": []
+    },
+    {
+      "id": "F09",
+      "name": "Dr. I. Jena",
+      "department": "ECE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": [
+        "P9"
+      ]
+    },
+    {
+      "id": "F10",
+      "name": "Prof. J. Panda",
+      "department": "ECE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": [
+        "P1"
+      ]
+    },
+    {
+      "id": "F11",
+      "name": "Dr. K. Pradhan",
+      "department": "ECE",
+      "daily_limit_hours": 4,
+      "unavailability": [
+        {
+          "day": "Mon",
+          "periods": [
+            "P1",
+            "P2"
+          ]
+        }
+      ],
+      "avoid_periods": []
+    },
+    {
+      "id": "F12",
+      "name": "Dr. L. Rout",
+      "department": "ECE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": []
+    },
+    {
+      "id": "F13",
+      "name": "Prof. M. Behera",
+      "department": "ECE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": [
+        "P1",
+        "P9"
+      ]
+    },
+    {
+      "id": "F14",
+      "name": "Dr. N. Swain",
+      "department": "ECE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": []
+    },
+    {
+      "id": "F15",
+      "name": "Dr. O. Tripathy",
+      "department": "ECE",
+      "daily_limit_hours": 4,
+      "unavailability": [
+        {
+          "day": "Fri",
+          "periods": [
+            "P8",
+            "P9"
+          ]
+        }
+      ],
+      "avoid_periods": []
+    },
+    {
+      "id": "F16",
+      "name": "Prof. P. Samal",
+      "department": "ECE",
+      "daily_limit_hours": 4,
+      "unavailability": [
+        {
+          "day": "Mon",
+          "periods": [
+            "P1",
+            "P2"
+          ]
+        }
+      ],
+      "avoid_periods": [
+        "P1"
+      ]
+    },
+    {
+      "id": "F17",
+      "name": "Dr. Q. Biswal",
+      "department": "ME",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": [
+        "P9"
+      ]
+    },
+    {
+      "id": "F18",
+      "name": "Prof. R. Panigrahi",
+      "department": "ME",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": []
+    },
+    {
+      "id": "F19",
+      "name": "Dr. S. Nayak",
+      "department": "ME",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": [
+        "P1"
+      ]
+    },
+    {
+      "id": "F20",
+      "name": "Dr. T. Barik",
+      "department": "ME",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": []
+    },
+    {
+      "id": "F21",
+      "name": "Prof. U. Acharya",
+      "department": "ME",
+      "daily_limit_hours": 4,
+      "unavailability": [
+        {
+          "day": "Mon",
+          "periods": [
+            "P1",
+            "P2"
+          ]
+        }
+      ],
+      "avoid_periods": [
+        "P9"
+      ]
+    },
+    {
+      "id": "F22",
+      "name": "Dr. V. Nanda",
+      "department": "ME",
+      "daily_limit_hours": 4,
+      "unavailability": [
+        {
+          "day": "Fri",
+          "periods": [
+            "P8",
+            "P9"
+          ]
+        }
+      ],
+      "avoid_periods": [
+        "P1"
+      ]
+    },
+    {
+      "id": "F23",
+      "name": "Dr. W. Kar",
+      "department": "ME",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": []
+    },
+    {
+      "id": "F24",
+      "name": "Prof. X. Sethi",
+      "department": "ME",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": []
+    },
+    {
+      "id": "F25",
+      "name": "Dr. Y. Khatua",
+      "department": "CE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": [
+        "P1",
+        "P9"
+      ]
+    },
+    {
+      "id": "F26",
+      "name": "Prof. Z. Majhi",
+      "department": "CE",
+      "daily_limit_hours": 4,
+      "unavailability": [
+        {
+          "day": "Mon",
+          "periods": [
+            "P1",
+            "P2"
+          ]
+        }
+      ],
+      "avoid_periods": []
+    },
+    {
+      "id": "F27",
+      "name": "Dr. AA. Parija",
+      "department": "CE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": []
+    },
+    {
+      "id": "F28",
+      "name": "Dr. AB. Padhi",
+      "department": "CE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": [
+        "P1"
+      ]
+    },
+    {
+      "id": "F29",
+      "name": "Prof. AC. Dalai",
+      "department": "CE",
+      "daily_limit_hours": 4,
+      "unavailability": [
+        {
+          "day": "Fri",
+          "periods": [
+            "P8",
+            "P9"
+          ]
+        }
+      ],
+      "avoid_periods": [
+        "P9"
+      ]
+    },
+    {
+      "id": "F30",
+      "name": "Dr. AD. Sarangi",
+      "department": "CE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": []
+    },
+    {
+      "id": "F31",
+      "name": "Dr. AE. Mallick",
+      "department": "CE",
+      "daily_limit_hours": 4,
+      "unavailability": [
+        {
+          "day": "Mon",
+          "periods": [
+            "P1",
+            "P2"
+          ]
+        }
+      ],
+      "avoid_periods": [
+        "P1"
+      ]
+    },
+    {
+      "id": "F32",
+      "name": "Prof. AF. Bisi",
+      "department": "CE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": []
+    },
+    {
+      "id": "F33",
+      "name": "Dr. AG. Paul",
+      "department": "EE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": [
+        "P9"
+      ]
+    },
+    {
+      "id": "F34",
+      "name": "Prof. AH. Ray",
+      "department": "EE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": [
+        "P1"
+      ]
+    },
+    {
+      "id": "F35",
+      "name": "Dr. AI. Dora",
+      "department": "EE",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": []
+    },
+    {
+      "id": "F36",
+      "name": "Dr. AJ. Giri",
+      "department": "EE",
+      "daily_limit_hours": 4,
+      "unavailability": [
+        {
+          "day": "Mon",
+          "periods": [
+            "P1",
+            "P2"
+          ]
+        },
+        {
+          "day": "Fri",
+          "periods": [
+            "P8",
+            "P9"
+          ]
+        }
+      ],
+      "avoid_periods": []
+    },
+    {
+      "id": "F37",
+      "name": "Dr. AK. Choudhury",
+      "department": "BS",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": [
+        "P1",
+        "P9"
+      ]
+    },
+    {
+      "id": "F38",
+      "name": "Prof. AL. Hota",
+      "department": "BS",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": []
+    },
+    {
+      "id": "F39",
+      "name": "Dr. AM. Pothal",
+      "department": "BS",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": []
+    },
+    {
+      "id": "F40",
+      "name": "Dr. AN. Muduli",
+      "department": "BS",
+      "daily_limit_hours": 4,
+      "unavailability": [],
+      "avoid_periods": [
+        "P1"
+      ]
+    }
+  ],
+  "student_groups": [
+    {
+      "id": "Y1-A",
+      "name": "First Year Section A",
+      "year": 1,
+      "size": 72,
+      "accessible_required": false
+    },
+    {
+      "id": "Y1-B",
+      "name": "First Year Section B",
+      "year": 1,
+      "size": 70,
+      "accessible_required": true
+    },
+    {
+      "id": "Y1-C",
+      "name": "First Year Section C",
+      "year": 1,
+      "size": 70,
+      "accessible_required": false
+    },
+    {
+      "id": "Y1-D",
+      "name": "First Year Section D",
+      "year": 1,
+      "size": 68,
+      "accessible_required": false
+    },
+    {
+      "id": "Y2-CSE",
+      "name": "Second Year CSE",
+      "year": 2,
+      "size": 65,
+      "accessible_required": false
+    },
+    {
+      "id": "Y2-ECE",
+      "name": "Second Year ECE",
+      "year": 2,
+      "size": 65,
+      "accessible_required": false
+    },
+    {
+      "id": "Y2-ME",
+      "name": "Second Year ME",
+      "year": 2,
+      "size": 64,
+      "accessible_required": false
+    },
+    {
+      "id": "Y2-CE",
+      "name": "Second Year CE",
+      "year": 2,
+      "size": 62,
+      "accessible_required": false
+    },
+    {
+      "id": "Y2-EE",
+      "name": "Second Year EE",
+      "year": 2,
+      "size": 62,
+      "accessible_required": false
+    },
+    {
+      "id": "Y3-CSE",
+      "name": "Third Year CSE",
+      "year": 3,
+      "size": 60,
+      "accessible_required": false
+    },
+    {
+      "id": "Y3-ECE",
+      "name": "Third Year ECE",
+      "year": 3,
+      "size": 60,
+      "accessible_required": false
+    },
+    {
+      "id": "Y3-ME",
+      "name": "Third Year ME",
+      "year": 3,
+      "size": 58,
+      "accessible_required": false
+    },
+    {
+      "id": "Y3-CE",
+      "name": "Third Year CE",
+      "year": 3,
+      "size": 56,
+      "accessible_required": false
+    },
+    {
+      "id": "Y3-EE",
+      "name": "Third Year EE",
+      "year": 3,
+      "size": 58,
+      "accessible_required": false
+    }
+  ],
+  "courses": [
+    {
+      "code": "MA101",
+      "name": "Linear Algebra & Calculus",
+      "department": "BS",
+      "year": 1,
+      "credits": 3
+    },
+    {
+      "code": "PH101",
+      "name": "Engineering Physics",
+      "department": "BS",
+      "year": 1,
+      "credits": 3
+    },
+    {
+      "code": "CH101",
+      "name": "Engineering Chemistry",
+      "department": "BS",
+      "year": 1,
+      "credits": 3
+    },
+    {
+      "code": "CS101",
+      "name": "Programming for Problem Solving",
+      "department": "CSE",
+      "year": 1,
+      "credits": 3
+    },
+    {
+      "code": "ME101",
+      "name": "Engineering Graphics & Workshop",
+      "department": "ME",
+      "year": 1,
+      "credits": 3
+    },
+    {
+      "code": "EE101",
+      "name": "Basic Electrical & Electronics",
+      "department": "EE",
+      "year": 1,
+      "credits": 3
+    },
+    {
+      "code": "HS101",
+      "name": "Communication Skills in English",
+      "department": "BS",
+      "year": 1,
+      "credits": 3
+    },
+    {
+      "code": "PH102",
+      "name": "Physics Lab",
+      "department": "BS",
+      "year": 1,
+      "credits": 2
+    },
+    {
+      "code": "CH102",
+      "name": "Chemistry Lab",
+      "department": "BS",
+      "year": 1,
+      "credits": 2
+    },
+    {
+      "code": "CS102",
+      "name": "Programming Lab",
+      "department": "CSE",
+      "year": 1,
+      "credits": 2
+    },
+    {
+      "code": "CS201",
+      "name": "Data Structures",
+      "department": "CSE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "CS202",
+      "name": "Computer Organization",
+      "department": "CSE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "CS203",
+      "name": "Discrete Math",
+      "department": "CSE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "CS204",
+      "name": "Object Oriented Java",
+      "department": "CSE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "CS205",
+      "name": "Data Structures Lab",
+      "department": "CSE",
+      "year": 2,
+      "credits": 2
+    },
+    {
+      "code": "EC201",
+      "name": "Digital Electronics",
+      "department": "ECE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "EC202",
+      "name": "Signals & Systems",
+      "department": "ECE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "EC203",
+      "name": "Network Theory",
+      "department": "ECE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "EC204",
+      "name": "Electromagnetic Fields",
+      "department": "ECE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "EC205",
+      "name": "Digital Electronics Lab",
+      "department": "ECE",
+      "year": 2,
+      "credits": 2
+    },
+    {
+      "code": "ME201",
+      "name": "Thermodynamics",
+      "department": "ME",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "ME202",
+      "name": "Strength of Materials",
+      "department": "ME",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "ME203",
+      "name": "Manufacturing Science",
+      "department": "ME",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "ME204",
+      "name": "Fluid Mechanics",
+      "department": "ME",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "ME205",
+      "name": "Manufacturing Lab",
+      "department": "ME",
+      "year": 2,
+      "credits": 2
+    },
+    {
+      "code": "CE201",
+      "name": "Surveying",
+      "department": "CE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "CE202",
+      "name": "Fluid Mechanics Civil",
+      "department": "CE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "CE203",
+      "name": "Solid Mechanics",
+      "department": "CE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "CE204",
+      "name": "Building Materials",
+      "department": "CE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "CE205",
+      "name": "Surveying Practice Lab",
+      "department": "CE",
+      "year": 2,
+      "credits": 2
+    },
+    {
+      "code": "EE201",
+      "name": "Electrical Machines I",
+      "department": "EE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "EE202",
+      "name": "Control Systems",
+      "department": "EE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "EE203",
+      "name": "Analog Electronics",
+      "department": "EE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "EE204",
+      "name": "Power Systems I",
+      "department": "EE",
+      "year": 2,
+      "credits": 3
+    },
+    {
+      "code": "EE205",
+      "name": "Electrical Machines Lab",
+      "department": "EE",
+      "year": 2,
+      "credits": 2
+    },
+    {
+      "code": "CS301",
+      "name": "Operating Systems",
+      "department": "CSE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "CS302",
+      "name": "Database Management Systems",
+      "department": "CSE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "CS303",
+      "name": "Compiler Design",
+      "department": "CSE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "CS304",
+      "name": "DBMS Lab",
+      "department": "CSE",
+      "year": 3,
+      "credits": 2
+    },
+    {
+      "code": "CS305A",
+      "name": "Machine Learning (Elective)",
+      "department": "CSE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "CS305B",
+      "name": "Cloud Computing (Elective)",
+      "department": "CSE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "EC301",
+      "name": "Microprocessors & Microcontrollers",
+      "department": "ECE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "EC302",
+      "name": "Analog Communication",
+      "department": "ECE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "EC303",
+      "name": "VLSI Design",
+      "department": "ECE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "EC304",
+      "name": "Microcontroller Lab",
+      "department": "ECE",
+      "year": 3,
+      "credits": 2
+    },
+    {
+      "code": "EC305A",
+      "name": "Digital Signal Processing (Elective)",
+      "department": "ECE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "EC305B",
+      "name": "Optical Networks (Elective)",
+      "department": "ECE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "ME301",
+      "name": "Heat Transfer",
+      "department": "ME",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "ME302",
+      "name": "Design of Machine Elements",
+      "department": "ME",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "ME303",
+      "name": "Kinematics of Machinery",
+      "department": "ME",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "ME304",
+      "name": "Heat Transfer Lab",
+      "department": "ME",
+      "year": 3,
+      "credits": 2
+    },
+    {
+      "code": "ME305",
+      "name": "Automobile Engineering (Elective)",
+      "department": "ME",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "CE301",
+      "name": "Structural Analysis",
+      "department": "CE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "CE302",
+      "name": "Geotechnical Engineering",
+      "department": "CE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "CE303",
+      "name": "Environmental Engineering",
+      "department": "CE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "CE304",
+      "name": "Geotech Lab",
+      "department": "CE",
+      "year": 3,
+      "credits": 2
+    },
+    {
+      "code": "CE305",
+      "name": "Transportation Engineering (Elective)",
+      "department": "CE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "EE301",
+      "name": "Electrical Machines II",
+      "department": "EE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "EE302",
+      "name": "Power Electronics",
+      "department": "EE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "EE303",
+      "name": "Microprocessors for EE",
+      "department": "EE",
+      "year": 3,
+      "credits": 3
+    },
+    {
+      "code": "EE304",
+      "name": "Power Electronics Lab",
+      "department": "EE",
+      "year": 3,
+      "credits": 2
+    },
+    {
+      "code": "EE305",
+      "name": "Renewable Energy Systems (Elective)",
+      "department": "EE",
+      "year": 3,
+      "credits": 3
+    }
+  ],
+  "sessions": [
+    {
+      "id": "S001",
+      "course_code": "CS102",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "computer_lab",
+      "student_groups": [
+        "Y1-A"
+      ],
+      "faculty_ids": [
+        "F01"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S002",
+      "course_code": "CS102",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "computer_lab",
+      "student_groups": [
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F02"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S003",
+      "course_code": "CS102",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "computer_lab",
+      "student_groups": [
+        "Y1-C"
+      ],
+      "faculty_ids": [
+        "F03"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S004",
+      "course_code": "CS102",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "computer_lab",
+      "student_groups": [
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F04"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S005",
+      "course_code": "PH102",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "physics_lab",
+      "student_groups": [
+        "Y1-A"
+      ],
+      "faculty_ids": [
+        "F37"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S006",
+      "course_code": "PH102",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "physics_lab",
+      "student_groups": [
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F38"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S007",
+      "course_code": "PH102",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "physics_lab",
+      "student_groups": [
+        "Y1-C"
+      ],
+      "faculty_ids": [
+        "F37"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S008",
+      "course_code": "PH102",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "physics_lab",
+      "student_groups": [
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F38"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S009",
+      "course_code": "CH102",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "chemistry_lab",
+      "student_groups": [
+        "Y1-A"
+      ],
+      "faculty_ids": [
+        "F39"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S010",
+      "course_code": "CH102",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "chemistry_lab",
+      "student_groups": [
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F40"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S011",
+      "course_code": "CH102",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "chemistry_lab",
+      "student_groups": [
+        "Y1-C"
+      ],
+      "faculty_ids": [
+        "F39"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S012",
+      "course_code": "CH102",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "chemistry_lab",
+      "student_groups": [
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F40"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S013",
+      "course_code": "CS205",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "computer_lab",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "faculty_ids": [
+        "F05"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S014",
+      "course_code": "EC205",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "electrical_lab",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "faculty_ids": [
+        "F11"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S015",
+      "course_code": "ME205",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "mechanical_lab",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "faculty_ids": [
+        "F19"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S016",
+      "course_code": "CE205",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "civil_lab",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "faculty_ids": [
+        "F27"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S017",
+      "course_code": "EE205",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "electrical_lab",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "faculty_ids": [
+        "F35"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S018",
+      "course_code": "CS304",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "computer_lab",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F06"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S019",
+      "course_code": "CS304",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "computer_lab",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F07"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S020",
+      "course_code": "EC304",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "electrical_lab",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "faculty_ids": [
+        "F12"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S021",
+      "course_code": "EC304",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "electrical_lab",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "faculty_ids": [
+        "F13"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S022",
+      "course_code": "ME304",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "mechanical_lab",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "faculty_ids": [
+        "F20"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S023",
+      "course_code": "ME304",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "mechanical_lab",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "faculty_ids": [
+        "F21"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S024",
+      "course_code": "CE304",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "civil_lab",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "faculty_ids": [
+        "F28"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S025",
+      "course_code": "CE304",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "civil_lab",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "faculty_ids": [
+        "F29"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S026",
+      "course_code": "EE304",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "electrical_lab",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "faculty_ids": [
+        "F36"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S027",
+      "course_code": "EE304",
+      "session_type": "lab",
+      "duration_hours": 3,
+      "required_room_type": "electrical_lab",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "faculty_ids": [
+        "F33"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S028",
+      "course_code": "MA101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F37"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": {
+        "day": "Mon",
+        "period": "P2"
+      }
+    },
+    {
+      "id": "S029",
+      "course_code": "MA101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F37"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S030",
+      "course_code": "MA101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F37"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S031",
+      "course_code": "MA101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-C",
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F38"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S032",
+      "course_code": "MA101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-C",
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F38"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S033",
+      "course_code": "MA101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-C",
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F38"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S034",
+      "course_code": "PH101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F39"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S035",
+      "course_code": "PH101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F39"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S036",
+      "course_code": "PH101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F39"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S037",
+      "course_code": "PH101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-C",
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F40"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S038",
+      "course_code": "PH101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-C",
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F40"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S039",
+      "course_code": "PH101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-C",
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F40"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S040",
+      "course_code": "CH101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F39"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S041",
+      "course_code": "CH101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F39"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S042",
+      "course_code": "CH101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F39"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S043",
+      "course_code": "CH101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-C",
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F40"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S044",
+      "course_code": "CH101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-C",
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F40"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S045",
+      "course_code": "CH101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "lecture_hall",
+      "student_groups": [
+        "Y1-C",
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F40"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S046",
+      "course_code": "CS101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-A"
+      ],
+      "faculty_ids": [
+        "F01"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S047",
+      "course_code": "CS101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F02"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S048",
+      "course_code": "CS101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-C"
+      ],
+      "faculty_ids": [
+        "F03"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S049",
+      "course_code": "CS101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F04"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S050",
+      "course_code": "CS101",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-A"
+      ],
+      "faculty_ids": [
+        "F01"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S051",
+      "course_code": "CS101",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F02"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S052",
+      "course_code": "CS101",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-C"
+      ],
+      "faculty_ids": [
+        "F03"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S053",
+      "course_code": "CS101",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F04"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S054",
+      "course_code": "ME101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-A"
+      ],
+      "faculty_ids": [
+        "F17"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S055",
+      "course_code": "ME101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F18"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S056",
+      "course_code": "ME101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-C"
+      ],
+      "faculty_ids": [
+        "F17"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S057",
+      "course_code": "ME101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F18"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S058",
+      "course_code": "EE101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-A"
+      ],
+      "faculty_ids": [
+        "F33"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S059",
+      "course_code": "EE101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F34"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S060",
+      "course_code": "EE101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-C"
+      ],
+      "faculty_ids": [
+        "F33"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S061",
+      "course_code": "EE101",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F34"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S062",
+      "course_code": "HS101",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-A"
+      ],
+      "faculty_ids": [
+        "F37"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S063",
+      "course_code": "HS101",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-B"
+      ],
+      "faculty_ids": [
+        "F38"
+      ],
+      "accessible_required": true,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S064",
+      "course_code": "HS101",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-C"
+      ],
+      "faculty_ids": [
+        "F37"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S065",
+      "course_code": "HS101",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y1-D"
+      ],
+      "faculty_ids": [
+        "F38"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S066",
+      "course_code": "CS201",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "faculty_ids": [
+        "F01"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S067",
+      "course_code": "CS201",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "faculty_ids": [
+        "F01"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S068",
+      "course_code": "CS201",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "faculty_ids": [
+        "F01"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S069",
+      "course_code": "CS202",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "faculty_ids": [
+        "F02"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S070",
+      "course_code": "CS202",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "faculty_ids": [
+        "F02"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S071",
+      "course_code": "CS202",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "faculty_ids": [
+        "F02"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S072",
+      "course_code": "CS203",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "faculty_ids": [
+        "F03"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S073",
+      "course_code": "CS203",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "faculty_ids": [
+        "F03"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S074",
+      "course_code": "CS203",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "faculty_ids": [
+        "F03"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S075",
+      "course_code": "CS204",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "faculty_ids": [
+        "F04"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S076",
+      "course_code": "CS204",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "faculty_ids": [
+        "F04"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S077",
+      "course_code": "CS204",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "faculty_ids": [
+        "F04"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S078",
+      "course_code": "EC201",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "faculty_ids": [
+        "F09"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S079",
+      "course_code": "EC201",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "faculty_ids": [
+        "F09"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S080",
+      "course_code": "EC201",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "faculty_ids": [
+        "F09"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S081",
+      "course_code": "EC202",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "faculty_ids": [
+        "F10"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S082",
+      "course_code": "EC202",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "faculty_ids": [
+        "F10"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S083",
+      "course_code": "EC202",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "faculty_ids": [
+        "F10"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S084",
+      "course_code": "EC203",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "faculty_ids": [
+        "F11"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S085",
+      "course_code": "EC203",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "faculty_ids": [
+        "F11"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S086",
+      "course_code": "EC203",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "faculty_ids": [
+        "F11"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S087",
+      "course_code": "EC204",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "faculty_ids": [
+        "F14"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S088",
+      "course_code": "EC204",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "faculty_ids": [
+        "F14"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S089",
+      "course_code": "EC204",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "faculty_ids": [
+        "F14"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S090",
+      "course_code": "ME201",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "faculty_ids": [
+        "F17"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S091",
+      "course_code": "ME201",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "faculty_ids": [
+        "F17"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S092",
+      "course_code": "ME201",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "faculty_ids": [
+        "F17"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S093",
+      "course_code": "ME202",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "faculty_ids": [
+        "F18"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S094",
+      "course_code": "ME202",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "faculty_ids": [
+        "F18"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S095",
+      "course_code": "ME202",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "faculty_ids": [
+        "F18"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S096",
+      "course_code": "ME203",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "faculty_ids": [
+        "F19"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S097",
+      "course_code": "ME203",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "faculty_ids": [
+        "F19"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S098",
+      "course_code": "ME203",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "faculty_ids": [
+        "F19"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S099",
+      "course_code": "ME204",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "faculty_ids": [
+        "F22"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S100",
+      "course_code": "ME204",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "faculty_ids": [
+        "F22"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S101",
+      "course_code": "ME204",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "faculty_ids": [
+        "F22"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S102",
+      "course_code": "CE201",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "faculty_ids": [
+        "F25"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S103",
+      "course_code": "CE201",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "faculty_ids": [
+        "F25"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S104",
+      "course_code": "CE201",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "faculty_ids": [
+        "F25"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S105",
+      "course_code": "CE202",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "faculty_ids": [
+        "F26"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S106",
+      "course_code": "CE202",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "faculty_ids": [
+        "F26"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S107",
+      "course_code": "CE202",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "faculty_ids": [
+        "F26"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S108",
+      "course_code": "CE203",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "faculty_ids": [
+        "F27"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S109",
+      "course_code": "CE203",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "faculty_ids": [
+        "F27"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S110",
+      "course_code": "CE203",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "faculty_ids": [
+        "F27"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S111",
+      "course_code": "CE204",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "faculty_ids": [
+        "F30"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S112",
+      "course_code": "CE204",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "faculty_ids": [
+        "F30"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S113",
+      "course_code": "CE204",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "faculty_ids": [
+        "F30"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S114",
+      "course_code": "EE201",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "faculty_ids": [
+        "F33"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S115",
+      "course_code": "EE201",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "faculty_ids": [
+        "F33"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S116",
+      "course_code": "EE201",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "faculty_ids": [
+        "F33"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S117",
+      "course_code": "EE202",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "faculty_ids": [
+        "F34"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S118",
+      "course_code": "EE202",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "faculty_ids": [
+        "F34"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S119",
+      "course_code": "EE202",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "faculty_ids": [
+        "F34"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S120",
+      "course_code": "EE203",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "faculty_ids": [
+        "F35"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S121",
+      "course_code": "EE203",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "faculty_ids": [
+        "F35"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S122",
+      "course_code": "EE203",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "faculty_ids": [
+        "F35"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S123",
+      "course_code": "EE204",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "faculty_ids": [
+        "F36"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S124",
+      "course_code": "EE204",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "faculty_ids": [
+        "F36"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S125",
+      "course_code": "EE204",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "faculty_ids": [
+        "F36"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S126",
+      "course_code": "CS301",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F05"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S127",
+      "course_code": "CS301",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F05"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S128",
+      "course_code": "CS301",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F05"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S129",
+      "course_code": "CS302",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F06"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S130",
+      "course_code": "CS302",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F06"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S131",
+      "course_code": "CS302",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F06"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S132",
+      "course_code": "CS303",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F07"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S133",
+      "course_code": "CS303",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F07"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S134",
+      "course_code": "CS303",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F07"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S135",
+      "course_code": "EC301",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "faculty_ids": [
+        "F13"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S136",
+      "course_code": "EC301",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "faculty_ids": [
+        "F13"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S137",
+      "course_code": "EC301",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "faculty_ids": [
+        "F13"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S138",
+      "course_code": "EC302",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "faculty_ids": [
+        "F15"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S139",
+      "course_code": "EC302",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "faculty_ids": [
+        "F15"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S140",
+      "course_code": "EC302",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "faculty_ids": [
+        "F15"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S141",
+      "course_code": "EC303",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "faculty_ids": [
+        "F16"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S142",
+      "course_code": "EC303",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "faculty_ids": [
+        "F16"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S143",
+      "course_code": "EC303",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "faculty_ids": [
+        "F16"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S144",
+      "course_code": "ME301",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "faculty_ids": [
+        "F21"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S145",
+      "course_code": "ME301",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "faculty_ids": [
+        "F21"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S146",
+      "course_code": "ME301",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "faculty_ids": [
+        "F21"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S147",
+      "course_code": "ME302",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "faculty_ids": [
+        "F23"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S148",
+      "course_code": "ME302",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "faculty_ids": [
+        "F23"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S149",
+      "course_code": "ME302",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "faculty_ids": [
+        "F23"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S150",
+      "course_code": "ME303",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "faculty_ids": [
+        "F24"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S151",
+      "course_code": "ME303",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "faculty_ids": [
+        "F24"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S152",
+      "course_code": "ME303",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "faculty_ids": [
+        "F24"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S153",
+      "course_code": "ME305",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "faculty_ids": [
+        "F18"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S154",
+      "course_code": "ME305",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "faculty_ids": [
+        "F18"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S155",
+      "course_code": "ME305",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "faculty_ids": [
+        "F18"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S156",
+      "course_code": "CE301",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "faculty_ids": [
+        "F29"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S157",
+      "course_code": "CE301",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "faculty_ids": [
+        "F29"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S158",
+      "course_code": "CE301",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "faculty_ids": [
+        "F29"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S159",
+      "course_code": "CE302",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "faculty_ids": [
+        "F31"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S160",
+      "course_code": "CE302",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "faculty_ids": [
+        "F31"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S161",
+      "course_code": "CE302",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "faculty_ids": [
+        "F31"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S162",
+      "course_code": "CE303",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "faculty_ids": [
+        "F32"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S163",
+      "course_code": "CE303",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "faculty_ids": [
+        "F32"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S164",
+      "course_code": "CE303",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "faculty_ids": [
+        "F32"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S165",
+      "course_code": "CE305",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "faculty_ids": [
+        "F26"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S166",
+      "course_code": "CE305",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "faculty_ids": [
+        "F26"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S167",
+      "course_code": "CE305",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "faculty_ids": [
+        "F26"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S168",
+      "course_code": "EE301",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "faculty_ids": [
+        "F33"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S169",
+      "course_code": "EE301",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "faculty_ids": [
+        "F33"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S170",
+      "course_code": "EE301",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "faculty_ids": [
+        "F33"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S171",
+      "course_code": "EE302",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "faculty_ids": [
+        "F34"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S172",
+      "course_code": "EE302",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "faculty_ids": [
+        "F34"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S173",
+      "course_code": "EE302",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "faculty_ids": [
+        "F34"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S174",
+      "course_code": "EE303",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "faculty_ids": [
+        "F35"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S175",
+      "course_code": "EE303",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "faculty_ids": [
+        "F35"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S176",
+      "course_code": "EE303",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "faculty_ids": [
+        "F35"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S177",
+      "course_code": "EE305",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "faculty_ids": [
+        "F36"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S178",
+      "course_code": "EE305",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "faculty_ids": [
+        "F36"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S179",
+      "course_code": "EE305",
+      "session_type": "tutorial",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "faculty_ids": [
+        "F36"
+      ],
+      "accessible_required": false,
+      "elective_basket": null,
+      "fixed_slot": null
+    },
+    {
+      "id": "S180",
+      "course_code": "CS305A",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F07"
+      ],
+      "accessible_required": false,
+      "elective_basket": "BASKET-Y3-CSE-SLOT1",
+      "fixed_slot": null
+    },
+    {
+      "id": "S181",
+      "course_code": "CS305B",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F08"
+      ],
+      "accessible_required": false,
+      "elective_basket": "BASKET-Y3-CSE-SLOT1",
+      "fixed_slot": null
+    },
+    {
+      "id": "S182",
+      "course_code": "CS305A",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F07"
+      ],
+      "accessible_required": false,
+      "elective_basket": "BASKET-Y3-CSE-SLOT2",
+      "fixed_slot": null
+    },
+    {
+      "id": "S183",
+      "course_code": "CS305B",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F08"
+      ],
+      "accessible_required": false,
+      "elective_basket": "BASKET-Y3-CSE-SLOT2",
+      "fixed_slot": null
+    },
+    {
+      "id": "S184",
+      "course_code": "CS305A",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F07"
+      ],
+      "accessible_required": false,
+      "elective_basket": "BASKET-Y3-CSE-SLOT3",
+      "fixed_slot": null
+    },
+    {
+      "id": "S185",
+      "course_code": "CS305B",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "faculty_ids": [
+        "F08"
+      ],
+      "accessible_required": false,
+      "elective_basket": "BASKET-Y3-CSE-SLOT3",
+      "fixed_slot": null
+    },
+    {
+      "id": "S186",
+      "course_code": "EC305A",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "faculty_ids": [
+        "F15"
+      ],
+      "accessible_required": false,
+      "elective_basket": "BASKET-Y3-ECE-SLOT1",
+      "fixed_slot": null
+    },
+    {
+      "id": "S187",
+      "course_code": "EC305B",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "faculty_ids": [
+        "F16"
+      ],
+      "accessible_required": false,
+      "elective_basket": "BASKET-Y3-ECE-SLOT1",
+      "fixed_slot": null
+    },
+    {
+      "id": "S188",
+      "course_code": "EC305A",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "faculty_ids": [
+        "F15"
+      ],
+      "accessible_required": false,
+      "elective_basket": "BASKET-Y3-ECE-SLOT2",
+      "fixed_slot": null
+    },
+    {
+      "id": "S189",
+      "course_code": "EC305B",
+      "session_type": "lecture",
+      "duration_hours": 1,
+      "required_room_type": "classroom",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "faculty_ids": [
+        "F16"
+      ],
+      "accessible_required": false,
+      "elective_basket": "BASKET-Y3-ECE-SLOT2",
+      "fixed_slot": null
+    }
+  ],
+  "exams": [
+    {
+      "id": "EXAM01",
+      "course_code": "MA101",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B",
+        "Y1-C",
+        "Y1-D"
+      ],
+      "student_count": 280,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM02",
+      "course_code": "PH101",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B",
+        "Y1-C",
+        "Y1-D"
+      ],
+      "student_count": 280,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM03",
+      "course_code": "CH101",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B",
+        "Y1-C",
+        "Y1-D"
+      ],
+      "student_count": 280,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM04",
+      "course_code": "CS101",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B",
+        "Y1-C",
+        "Y1-D"
+      ],
+      "student_count": 280,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM05",
+      "course_code": "ME101",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B",
+        "Y1-C",
+        "Y1-D"
+      ],
+      "student_count": 280,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM06",
+      "course_code": "EE101",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B",
+        "Y1-C",
+        "Y1-D"
+      ],
+      "student_count": 280,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM07",
+      "course_code": "HS101",
+      "student_groups": [
+        "Y1-A",
+        "Y1-B",
+        "Y1-C",
+        "Y1-D"
+      ],
+      "student_count": 280,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM08",
+      "course_code": "CS201",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "student_count": 65,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM09",
+      "course_code": "CS202",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "student_count": 65,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM10",
+      "course_code": "CS203",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "student_count": 65,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM11",
+      "course_code": "CS204",
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "student_count": 65,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM12",
+      "course_code": "EC201",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "student_count": 65,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM13",
+      "course_code": "EC202",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "student_count": 65,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM14",
+      "course_code": "EC203",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "student_count": 65,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM15",
+      "course_code": "EC204",
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "student_count": 65,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM16",
+      "course_code": "ME201",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "student_count": 64,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM17",
+      "course_code": "ME202",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "student_count": 64,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM18",
+      "course_code": "ME203",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "student_count": 64,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM19",
+      "course_code": "ME204",
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "student_count": 64,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM20",
+      "course_code": "CE201",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "student_count": 62,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM21",
+      "course_code": "CE202",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "student_count": 62,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM22",
+      "course_code": "CE203",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "student_count": 62,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM23",
+      "course_code": "CE204",
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "student_count": 62,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM24",
+      "course_code": "EE201",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "student_count": 62,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM25",
+      "course_code": "EE202",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "student_count": 62,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM26",
+      "course_code": "EE203",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "student_count": 62,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM27",
+      "course_code": "EE204",
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "student_count": 62,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM28",
+      "course_code": "CS301",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "student_count": 60,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM29",
+      "course_code": "CS302",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "student_count": 60,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM30",
+      "course_code": "CS303",
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "student_count": 60,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM31",
+      "course_code": "EC301",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "student_count": 60,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM32",
+      "course_code": "EC302",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "student_count": 60,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM33",
+      "course_code": "EC303",
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "student_count": 60,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM34",
+      "course_code": "ME301",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "student_count": 58,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM35",
+      "course_code": "ME302",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "student_count": 58,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM36",
+      "course_code": "ME303",
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "student_count": 58,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM37",
+      "course_code": "CE301",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "student_count": 56,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM38",
+      "course_code": "CE302",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "student_count": 56,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM39",
+      "course_code": "CE303",
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "student_count": 56,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM40",
+      "course_code": "EE301",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "student_count": 58,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    },
+    {
+      "id": "EXAM41",
+      "course_code": "EE302",
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "student_count": 58,
+      "duration_hours": 2,
+      "preferred_room_types": [
+        "auditorium",
+        "lecture_hall",
+        "classroom"
+      ]
+    }
+  ],
+  "booking_requests": [
+    {
+      "id": "BK01",
+      "requester_name": "Spectra Core Committee",
+      "requester_role": "club",
+      "category": "institute_event",
+      "title": "Spectra Opening Ceremony",
+      "original_text": "Need Auditorium for grand inaugural event of Spectra fest on Wednesday afternoon.",
+      "day": "Wed",
+      "start_period": "P6",
+      "end_period": "P8",
+      "preferred_room": "AUD",
+      "required_room_type": "auditorium",
+      "expected_attendance": 350,
+      "features_needed": [
+        "stage",
+        "sound_system",
+        "projector"
+      ]
+    },
+    {
+      "id": "BK02",
+      "requester_name": "Robotics Club",
+      "requester_role": "club",
+      "category": "club_event",
+      "title": "RoboWars Arena Setup",
+      "original_text": "OAT chahiye Friday dopahar RoboWars competition ke liye with sound setup.",
+      "day": "Fri",
+      "start_period": "P7",
+      "end_period": "P9",
+      "preferred_room": "OAT",
+      "required_room_type": "open_air_theatre",
+      "expected_attendance": 250,
+      "features_needed": [
+        "stage",
+        "sound_system"
+      ]
+    },
+    {
+      "id": "BK03",
+      "requester_name": "Dr. A. Sharma",
+      "requester_role": "faculty",
+      "category": "guest_lecture",
+      "title": "Distinguished AI Lecture",
+      "original_text": "Seminar Hall 1 required on Tuesday 10 AM for visiting professor from IIT.",
+      "day": "Tue",
+      "start_period": "P3",
+      "end_period": "P4",
+      "preferred_room": "SH-1",
+      "required_room_type": "seminar_hall",
+      "expected_attendance": 120,
+      "features_needed": [
+        "projector",
+        "ac"
+      ]
+    },
+    {
+      "id": "BK04",
+      "requester_name": "Coding Club",
+      "requester_role": "club",
+      "category": "club_event",
+      "title": "24-Hour Hackathon Pre-Briefing",
+      "original_text": "Bhai evening me Computing Lab 1 book kar do for 2 hours (18:00 to 20:00).",
+      "day": "Thu",
+      "start_period": "P10",
+      "end_period": "P11",
+      "preferred_room": "LAB-CS1",
+      "required_room_type": "computer_lab",
+      "expected_attendance": 60,
+      "features_needed": [
+        "computers"
+      ]
+    },
+    {
+      "id": "BK05",
+      "requester_name": "ECE Dept Coordinator",
+      "requester_role": "coordinator",
+      "category": "department_event",
+      "title": "ECE Alumni Interaction",
+      "original_text": "We need Seminar Hall 2 on Thursday P3-P4 for department alumni talk.",
+      "day": "Thu",
+      "start_period": "P3",
+      "end_period": "P4",
+      "preferred_room": "SH-2",
+      "required_room_type": "seminar_hall",
+      "expected_attendance": 100,
+      "features_needed": [
+        "projector"
+      ]
+    },
+    {
+      "id": "BK06",
+      "requester_name": "Music Society",
+      "requester_role": "club",
+      "category": "club_event",
+      "title": "Acoustic Night Rehearsal",
+      "original_text": "OAT book kar do Thursday evening P10 to P12 music rehearsal ke liye.",
+      "day": "Thu",
+      "start_period": "P10",
+      "end_period": "P12",
+      "preferred_room": "OAT",
+      "required_room_type": "open_air_theatre",
+      "expected_attendance": 80,
+      "features_needed": [
+        "stage"
+      ]
+    },
+    {
+      "id": "BK07",
+      "requester_name": "Dean Student Affairs",
+      "requester_role": "admin",
+      "category": "institute_event",
+      "title": "Inter-College Debate Finals",
+      "original_text": "Seminar Hall 1 is needed on Monday 14:00-16:00 (P6-P7) for National Debate.",
+      "day": "Mon",
+      "start_period": "P6",
+      "end_period": "P7",
+      "preferred_room": "SH-1",
+      "required_room_type": "seminar_hall",
+      "expected_attendance": 140,
+      "features_needed": [
+        "ac",
+        "sound_system"
+      ]
+    },
+    {
+      "id": "BK08",
+      "requester_name": "Literary Club",
+      "requester_role": "club",
+      "category": "club_event",
+      "title": "Poetry Slam",
+      "original_text": "CR-1 or CR-2 chahiye Tuesday evening P10-P11 for open mic.",
+      "day": "Tue",
+      "start_period": "P10",
+      "end_period": "P11",
+      "preferred_room": "CR-1",
+      "required_room_type": "classroom",
+      "expected_attendance": 45,
+      "features_needed": [
+        "projector"
+      ]
+    },
+    {
+      "id": "BK09",
+      "requester_name": "Mech Dept Coordinator",
+      "requester_role": "coordinator",
+      "category": "department_event",
+      "title": "CAD Design Showcase",
+      "original_text": "Mechanical workshop required on Wednesday morning P2-P4.",
+      "day": "Wed",
+      "start_period": "P2",
+      "end_period": "P4",
+      "preferred_room": "LAB-ME",
+      "required_room_type": "mechanical_lab",
+      "expected_attendance": 50,
+      "features_needed": [
+        "lathes"
+      ]
+    },
+    {
+      "id": "BK10",
+      "requester_name": "Dance Club",
+      "requester_role": "club",
+      "category": "club_event",
+      "title": "Spectra Dance Troupe Practice",
+      "original_text": "Auditorium stage chahiye Monday P10-P12 for dance rehearsal.",
+      "day": "Mon",
+      "start_period": "P10",
+      "end_period": "P12",
+      "preferred_room": "AUD",
+      "required_room_type": "auditorium",
+      "expected_attendance": 30,
+      "features_needed": [
+        "stage"
+      ]
+    },
+    {
+      "id": "BK11",
+      "requester_name": "Dr. I. Jena",
+      "requester_role": "faculty",
+      "category": "guest_lecture",
+      "title": "Semiconductor Industry Roadmap",
+      "original_text": "Lecture Hall 1 requested on Friday P3-P4 for Intel guest speaker.",
+      "day": "Fri",
+      "start_period": "P3",
+      "end_period": "P4",
+      "preferred_room": "LH-1",
+      "required_room_type": "lecture_hall",
+      "expected_attendance": 110,
+      "features_needed": [
+        "projector"
+      ]
+    },
+    {
+      "id": "BK12",
+      "requester_name": "Photography Club",
+      "requester_role": "club",
+      "category": "club_event",
+      "title": "Annual Photo Exhibition",
+      "original_text": "Seminar Hall 2 corridor and hall on Wednesday P6-P8.",
+      "day": "Wed",
+      "start_period": "P6",
+      "end_period": "P8",
+      "preferred_room": "SH-2",
+      "required_room_type": "seminar_hall",
+      "expected_attendance": 90,
+      "features_needed": [
+        "ac"
+      ]
+    },
+    {
+      "id": "BK13",
+      "requester_name": "Civil Dept Coordinator",
+      "requester_role": "coordinator",
+      "category": "department_event",
+      "title": "Smart Cities Workshop",
+      "original_text": "Lecture Hall 3 for Civil department workshop on Thursday P6-P8.",
+      "day": "Thu",
+      "start_period": "P6",
+      "end_period": "P8",
+      "preferred_room": "LH-3",
+      "required_room_type": "lecture_hall",
+      "expected_attendance": 80,
+      "features_needed": [
+        "projector"
+      ]
+    },
+    {
+      "id": "BK14",
+      "requester_name": "Spectra Tech Team",
+      "requester_role": "club",
+      "category": "club_event",
+      "title": "LAN Gaming Tournament - Valorant",
+      "original_text": "Computing Lab 2 chahiye Friday shaam 17:00 se 21:00 (P9 to P12).",
+      "day": "Fri",
+      "start_period": "P9",
+      "end_period": "P12",
+      "preferred_room": "LAB-CS2",
+      "required_room_type": "computer_lab",
+      "expected_attendance": 70,
+      "features_needed": [
+        "computers"
+      ]
+    },
+    {
+      "id": "BK15",
+      "requester_name": "Dr. Q. Biswal",
+      "requester_role": "faculty",
+      "category": "guest_lecture",
+      "title": "Electric Mobility Trends",
+      "original_text": "Seminar Hall 1 on Wednesday P2-P3 for Tata Motors Tech talk.",
+      "day": "Wed",
+      "start_period": "P2",
+      "end_period": "P3",
+      "preferred_room": "SH-1",
+      "required_room_type": "seminar_hall",
+      "expected_attendance": 130,
+      "features_needed": [
+        "sound_system"
+      ]
+    },
+    {
+      "id": "BK16",
+      "requester_name": "Dramatics Society",
+      "requester_role": "club",
+      "category": "club_event",
+      "title": "Street Play Rehearsal",
+      "original_text": "OAT chahiye Tuesday subah P1-P2 play practice ke liye.",
+      "day": "Tue",
+      "start_period": "P1",
+      "end_period": "P2",
+      "preferred_room": "OAT",
+      "required_room_type": "open_air_theatre",
+      "expected_attendance": 40,
+      "features_needed": [
+        "stage"
+      ]
+    },
+    {
+      "id": "BK17",
+      "requester_name": "Training & Placement Cell",
+      "requester_role": "admin",
+      "category": "institute_event",
+      "title": "Campus Placement Drive - Amazon",
+      "original_text": "Auditorium required on Tuesday full morning P1-P5 for PPT and online test briefing.",
+      "day": "Tue",
+      "start_period": "P1",
+      "end_period": "P5",
+      "preferred_room": "AUD",
+      "required_room_type": "auditorium",
+      "expected_attendance": 380,
+      "features_needed": [
+        "projector",
+        "sound_system"
+      ]
+    },
+    {
+      "id": "BK18",
+      "requester_name": "IEEE Student Branch",
+      "requester_role": "club",
+      "category": "club_event",
+      "title": "PCB Design Hands-on Workshop",
+      "original_text": "Electrical Lab chahiye Saturday ya Friday shaam P8-P9.",
+      "day": "Fri",
+      "start_period": "P8",
+      "end_period": "P9",
+      "preferred_room": "LAB-EE",
+      "required_room_type": "electrical_lab",
+      "expected_attendance": 50,
+      "features_needed": [
+        "oscilloscopes"
+      ]
+    },
+    {
+      "id": "BK19",
+      "requester_name": "Dr. Y. Khatua",
+      "requester_role": "faculty",
+      "category": "guest_lecture",
+      "title": "Seismic Disaster Mitigation",
+      "original_text": "Lecture Hall 2 on Monday P8-P9 for Guest Lecture from NDMA.",
+      "day": "Mon",
+      "start_period": "P8",
+      "end_period": "P9",
+      "preferred_room": "LH-2",
+      "required_room_type": "lecture_hall",
+      "expected_attendance": 100,
+      "features_needed": [
+        "projector"
+      ]
+    },
+    {
+      "id": "BK20",
+      "requester_name": "Sports Committee",
+      "requester_role": "club",
+      "category": "club_event",
+      "title": "Spectra Chess Championship",
+      "original_text": "Classroom CR-3 chahiye Thursday P6-P8 for chess matches.",
+      "day": "Thu",
+      "start_period": "P6",
+      "end_period": "P8",
+      "preferred_room": "CR-3",
+      "required_room_type": "classroom",
+      "expected_attendance": 40,
+      "features_needed": [
+        "ac"
+      ]
+    },
+    {
+      "id": "BK21",
+      "requester_name": "EE Dept Coordinator",
+      "requester_role": "coordinator",
+      "category": "department_event",
+      "title": "Smart Grid Demo",
+      "original_text": "Seminar Hall 2 on Tuesday P6-P7 for department project demos.",
+      "day": "Tue",
+      "start_period": "P6",
+      "end_period": "P7",
+      "preferred_room": "SH-2",
+      "required_room_type": "seminar_hall",
+      "expected_attendance": 80,
+      "features_needed": [
+        "projector"
+      ]
+    },
+    {
+      "id": "BK22",
+      "requester_name": "Spectra Core Committee",
+      "requester_role": "club",
+      "category": "institute_event",
+      "title": "Star Night Musical Band",
+      "original_text": "Open Air Theatre on Friday 18:00 to 22:00 (P10 to P13) for celebrity band night.",
+      "day": "Fri",
+      "start_period": "P10",
+      "end_period": "P13",
+      "preferred_room": "OAT",
+      "required_room_type": "open_air_theatre",
+      "expected_attendance": 550,
+      "features_needed": [
+        "stage",
+        "sound_system"
+      ]
+    },
+    {
+      "id": "BK23",
+      "requester_name": "Astronomy Club",
+      "requester_role": "club",
+      "category": "club_event",
+      "title": "Night Sky Observation",
+      "original_text": "OAT on Wednesday evening P11-P13 for telescope viewing.",
+      "day": "Wed",
+      "start_period": "P11",
+      "end_period": "P13",
+      "preferred_room": "OAT",
+      "required_room_type": "open_air_theatre",
+      "expected_attendance": 70,
+      "features_needed": []
+    },
+    {
+      "id": "BK24",
+      "requester_name": "Dr. AK. Choudhury",
+      "requester_role": "faculty",
+      "category": "guest_lecture",
+      "title": "Quantum Mechanics & Computing",
+      "original_text": "Seminar Hall 1 on Thursday P7-P8 for Physics Colloquium.",
+      "day": "Thu",
+      "start_period": "P7",
+      "end_period": "P8",
+      "preferred_room": "SH-1",
+      "required_room_type": "seminar_hall",
+      "expected_attendance": 90,
+      "features_needed": [
+        "projector"
+      ]
+    },
+    {
+      "id": "BK25",
+      "requester_name": "Fine Arts Club",
+      "requester_role": "club",
+      "category": "club_event",
+      "title": "Origami Workshop (Cancelled)",
+      "original_text": "CR-5 on Wednesday P3-P4. Please note this request has been cancelled by the club.",
+      "day": "Wed",
+      "start_period": "P3",
+      "end_period": "P4",
+      "preferred_room": "CR-5",
+      "required_room_type": "classroom",
+      "expected_attendance": 30,
+      "features_needed": [],
+      "status": "cancelled"
+    }
+  ]
+}
