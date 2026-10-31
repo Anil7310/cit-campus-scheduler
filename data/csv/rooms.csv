@@ -1,0 +1,28 @@
+id,name,type,capacity,accessible,features
+AUD,Main Auditorium,auditorium,450,True,projector;ac;sound_system;stage
+OAT,Open Air Theatre,open_air_theatre,600,True,stage;sound_system
+SH-1,Seminar Hall 1,seminar_hall,160,True,projector;ac;sound_system
+SH-2,Seminar Hall 2,seminar_hall,150,False,projector;ac;sound_system
+LH-1,Lecture Hall 1,lecture_hall,150,True,projector;ac
+LH-2,Lecture Hall 2,lecture_hall,150,True,projector;ac
+LH-3,Lecture Hall 3,lecture_hall,140,False,projector;ac
+LH-4,Lecture Hall 4,lecture_hall,140,False,projector
+LH-5,Lecture Hall 5,lecture_hall,130,True,projector;ac
+LH-6,Lecture Hall 6,lecture_hall,130,False,projector
+CR-1,Classroom 1,classroom,80,True,projector
+CR-2,Classroom 2,classroom,80,True,projector
+CR-3,Classroom 3,classroom,80,True,projector
+CR-4,Classroom 4,classroom,80,False,projector
+CR-5,Classroom 5,classroom,80,False,projector
+CR-6,Classroom 6,classroom,80,False,projector
+CR-7,Classroom 7,classroom,75,True,projector
+CR-8,Classroom 8,classroom,75,False,projector
+CR-9,Classroom 9,classroom,75,False,projector
+CR-10,Classroom 10,classroom,75,False,projector
+LAB-CS1,Computing Lab 1,computer_lab,80,True,computers;ac;projector
+LAB-CS2,Computing Lab 2,computer_lab,80,False,computers;ac;projector
+LAB-PHY,Physics Laboratory,physics_lab,75,True,dark_room;optical_benches
+LAB-CHE,Chemistry Laboratory,chemistry_lab,75,True,fume_hoods
+LAB-EE,Electrical Machines Lab,electrical_lab,75,False,workbenches;oscilloscopes
+LAB-ME,Mechanical Workshop,mechanical_lab,75,True,lathes;cnc
+LAB-CE,Civil Survey & Material Lab,civil_lab,75,True,utm_machine

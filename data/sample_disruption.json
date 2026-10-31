@@ -1,0 +1,41 @@
+{
+  "disruptions": [
+    {
+      "id": "DISRUPT-01",
+      "type": "faculty_leave",
+      "faculty_id": "F03",
+      "day": "Tue",
+      "start_period": "P1",
+      "end_period": "P4",
+      "reason": "Medical leave for Dr. C. Patra"
+    },
+    {
+      "id": "DISRUPT-02",
+      "type": "room_closure",
+      "room_id": "CR-2",
+      "day": "Thu",
+      "start_period": "P1",
+      "end_period": "P9",
+      "reason": "Emergency roof ceiling and electrical maintenance"
+    },
+    {
+      "id": "DISRUPT-03",
+      "type": "new_session",
+      "session": {
+        "id": "S_NEW_01",
+        "course_code": "CS301",
+        "session_type": "lecture",
+        "duration_hours": 1,
+        "required_room_type": "classroom",
+        "student_groups": [
+          "Y3-CSE"
+        ],
+        "faculty_ids": [
+          "F05"
+        ],
+        "accessible_required": false
+      },
+      "reason": "Extra makeup lecture on Operating Systems before midsems"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+code,name,department,year,credits
+MA101,Linear Algebra & Calculus,BS,1,3
+PH101,Engineering Physics,BS,1,3
+CH101,Engineering Chemistry,BS,1,3
+CS101,Programming for Problem Solving,CSE,1,3
+ME101,Engineering Graphics & Workshop,ME,1,3
+EE101,Basic Electrical & Electronics,EE,1,3
+HS101,Communication Skills in English,BS,1,3
+PH102,Physics Lab,BS,1,2
+CH102,Chemistry Lab,BS,1,2
+CS102,Programming Lab,CSE,1,2
+CS201,Data Structures,CSE,2,3
+CS202,Computer Organization,CSE,2,3
+CS203,Discrete Math,CSE,2,3
+CS204,Object Oriented Java,CSE,2,3
+CS205,Data Structures Lab,CSE,2,2
+EC201,Digital Electronics,ECE,2,3
+EC202,Signals & Systems,ECE,2,3
+EC203,Network Theory,ECE,2,3
+EC204,Electromagnetic Fields,ECE,2,3
+EC205,Digital Electronics Lab,ECE,2,2
+ME201,Thermodynamics,ME,2,3
+ME202,Strength of Materials,ME,2,3
+ME203,Manufacturing Science,ME,2,3
+ME204,Fluid Mechanics,ME,2,3
+ME205,Manufacturing Lab,ME,2,2
+CE201,Surveying,CE,2,3
+CE202,Fluid Mechanics Civil,CE,2,3
+CE203,Solid Mechanics,CE,2,3
+CE204,Building Materials,CE,2,3
+CE205,Surveying Practice Lab,CE,2,2
+EE201,Electrical Machines I,EE,2,3
+EE202,Control Systems,EE,2,3
+EE203,Analog Electronics,EE,2,3
+EE204,Power Systems I,EE,2,3
+EE205,Electrical Machines Lab,EE,2,2
+CS301,Operating Systems,CSE,3,3
+CS302,Database Management Systems,CSE,3,3
+CS303,Compiler Design,CSE,3,3
+CS304,DBMS Lab,CSE,3,2
+CS305A,Machine Learning (Elective),CSE,3,3
+CS305B,Cloud Computing (Elective),CSE,3,3
+EC301,Microprocessors & Microcontrollers,ECE,3,3
+EC302,Analog Communication,ECE,3,3
+EC303,VLSI Design,ECE,3,3
+EC304,Microcontroller Lab,ECE,3,2
+EC305A,Digital Signal Processing (Elective),ECE,3,3
+EC305B,Optical Networks (Elective),ECE,3,3
+ME301,Heat Transfer,ME,3,3
+ME302,Design of Machine Elements,ME,3,3
+ME303,Kinematics of Machinery,ME,3,3
+ME304,Heat Transfer Lab,ME,3,2
+ME305,Automobile Engineering (Elective),ME,3,3
+CE301,Structural Analysis,CE,3,3
+CE302,Geotechnical Engineering,CE,3,3
+CE303,Environmental Engineering,CE,3,3
+CE304,Geotech Lab,CE,3,2
+CE305,Transportation Engineering (Elective),CE,3,3
+EE301,Electrical Machines II,EE,3,3
+EE302,Power Electronics,EE,3,3
+EE303,Microprocessors for EE,EE,3,3
+EE304,Power Electronics Lab,EE,3,2
+EE305,Renewable Energy Systems (Elective),EE,3,3

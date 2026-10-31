@@ -1,0 +1,15 @@
+id,name,year,size,accessible_required
+Y1-A,First Year Section A,1,72,False
+Y1-B,First Year Section B,1,70,True
+Y1-C,First Year Section C,1,70,False
+Y1-D,First Year Section D,1,68,False
+Y2-CSE,Second Year CSE,2,65,False
+Y2-ECE,Second Year ECE,2,65,False
+Y2-ME,Second Year ME,2,64,False
+Y2-CE,Second Year CE,2,62,False
+Y2-EE,Second Year EE,2,62,False
+Y3-CSE,Third Year CSE,3,60,False
+Y3-ECE,Third Year ECE,3,60,False
+Y3-ME,Third Year ME,3,58,False
+Y3-CE,Third Year CE,3,56,False
+Y3-EE,Third Year EE,3,58,False
