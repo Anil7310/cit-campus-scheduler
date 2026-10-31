@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "generated_at": "2026-10-31T10:15:31.235733+00:00",
+    "generated_at": "2026-10-31T10:22:01.369778+00:00",
     "dataset_version": "1.0.0",
     "solver_status": "OPTIMAL",
     "metrics": {
       "objective_value": 0.0,
-      "wall_time": 11.3831708,
+      "wall_time": 11.0986934,
       "branches": 620141
     }
   },
@@ -1145,6 +1145,1028 @@
       "room_id": "CR-1"
     }
   ],
-  "exams": [],
-  "bookings": []
+  "exams": [
+    {
+      "exam_id": "EXAM01",
+      "course_code": "MA101",
+      "day": "Mon",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "AUD",
+        "LH-1"
+      ],
+      "student_groups": [
+        "Y1-A",
+        "Y1-B",
+        "Y1-C",
+        "Y1-D"
+      ],
+      "student_count": 280
+    },
+    {
+      "exam_id": "EXAM02",
+      "course_code": "PH101",
+      "day": "Mon",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "AUD",
+        "LH-1"
+      ],
+      "student_groups": [
+        "Y1-A",
+        "Y1-B",
+        "Y1-C",
+        "Y1-D"
+      ],
+      "student_count": 280
+    },
+    {
+      "exam_id": "EXAM03",
+      "course_code": "CH101",
+      "day": "Tue",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "AUD",
+        "LH-2"
+      ],
+      "student_groups": [
+        "Y1-A",
+        "Y1-B",
+        "Y1-C",
+        "Y1-D"
+      ],
+      "student_count": 280
+    },
+    {
+      "exam_id": "EXAM04",
+      "course_code": "CS101",
+      "day": "Tue",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "AUD",
+        "LH-3"
+      ],
+      "student_groups": [
+        "Y1-A",
+        "Y1-B",
+        "Y1-C",
+        "Y1-D"
+      ],
+      "student_count": 280
+    },
+    {
+      "exam_id": "EXAM05",
+      "course_code": "ME101",
+      "day": "Wed",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "AUD",
+        "LH-4"
+      ],
+      "student_groups": [
+        "Y1-A",
+        "Y1-B",
+        "Y1-C",
+        "Y1-D"
+      ],
+      "student_count": 280
+    },
+    {
+      "exam_id": "EXAM06",
+      "course_code": "EE101",
+      "day": "Wed",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-1",
+        "LH-2",
+        "LH-3",
+        "LH-4"
+      ],
+      "student_groups": [
+        "Y1-A",
+        "Y1-B",
+        "Y1-C",
+        "Y1-D"
+      ],
+      "student_count": 280
+    },
+    {
+      "exam_id": "EXAM07",
+      "course_code": "HS101",
+      "day": "Thu",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-1",
+        "LH-2",
+        "LH-5",
+        "LH-6"
+      ],
+      "student_groups": [
+        "Y1-A",
+        "Y1-B",
+        "Y1-C",
+        "Y1-D"
+      ],
+      "student_count": 280
+    },
+    {
+      "exam_id": "EXAM08",
+      "course_code": "CS201",
+      "day": "Mon",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-2"
+      ],
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "student_count": 65
+    },
+    {
+      "exam_id": "EXAM09",
+      "course_code": "CS202",
+      "day": "Mon",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-2"
+      ],
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "student_count": 65
+    },
+    {
+      "exam_id": "EXAM10",
+      "course_code": "CS203",
+      "day": "Tue",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-1"
+      ],
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "student_count": 65
+    },
+    {
+      "exam_id": "EXAM11",
+      "course_code": "CS204",
+      "day": "Tue",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-1"
+      ],
+      "student_groups": [
+        "Y2-CSE"
+      ],
+      "student_count": 65
+    },
+    {
+      "exam_id": "EXAM12",
+      "course_code": "EC201",
+      "day": "Mon",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-3"
+      ],
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "student_count": 65
+    },
+    {
+      "exam_id": "EXAM13",
+      "course_code": "EC202",
+      "day": "Mon",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-3"
+      ],
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "student_count": 65
+    },
+    {
+      "exam_id": "EXAM14",
+      "course_code": "EC203",
+      "day": "Tue",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-3"
+      ],
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "student_count": 65
+    },
+    {
+      "exam_id": "EXAM15",
+      "course_code": "EC204",
+      "day": "Tue",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-2"
+      ],
+      "student_groups": [
+        "Y2-ECE"
+      ],
+      "student_count": 65
+    },
+    {
+      "exam_id": "EXAM16",
+      "course_code": "ME201",
+      "day": "Mon",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-4"
+      ],
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "student_count": 64
+    },
+    {
+      "exam_id": "EXAM17",
+      "course_code": "ME202",
+      "day": "Mon",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-4"
+      ],
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "student_count": 64
+    },
+    {
+      "exam_id": "EXAM18",
+      "course_code": "ME203",
+      "day": "Tue",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-4"
+      ],
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "student_count": 64
+    },
+    {
+      "exam_id": "EXAM19",
+      "course_code": "ME204",
+      "day": "Tue",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-4"
+      ],
+      "student_groups": [
+        "Y2-ME"
+      ],
+      "student_count": 64
+    },
+    {
+      "exam_id": "EXAM20",
+      "course_code": "CE201",
+      "day": "Mon",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-5"
+      ],
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "student_count": 62
+    },
+    {
+      "exam_id": "EXAM21",
+      "course_code": "CE202",
+      "day": "Mon",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-5"
+      ],
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "student_count": 62
+    },
+    {
+      "exam_id": "EXAM22",
+      "course_code": "CE203",
+      "day": "Tue",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-5"
+      ],
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "student_count": 62
+    },
+    {
+      "exam_id": "EXAM23",
+      "course_code": "CE204",
+      "day": "Tue",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-5"
+      ],
+      "student_groups": [
+        "Y2-CE"
+      ],
+      "student_count": 62
+    },
+    {
+      "exam_id": "EXAM24",
+      "course_code": "EE201",
+      "day": "Mon",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-6"
+      ],
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "student_count": 62
+    },
+    {
+      "exam_id": "EXAM25",
+      "course_code": "EE202",
+      "day": "Mon",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-6"
+      ],
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "student_count": 62
+    },
+    {
+      "exam_id": "EXAM26",
+      "course_code": "EE203",
+      "day": "Tue",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-6"
+      ],
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "student_count": 62
+    },
+    {
+      "exam_id": "EXAM27",
+      "course_code": "EE204",
+      "day": "Tue",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-6"
+      ],
+      "student_groups": [
+        "Y2-EE"
+      ],
+      "student_count": 62
+    },
+    {
+      "exam_id": "EXAM28",
+      "course_code": "CS301",
+      "day": "Mon",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "SH-1"
+      ],
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "student_count": 60
+    },
+    {
+      "exam_id": "EXAM29",
+      "course_code": "CS302",
+      "day": "Mon",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "SH-1"
+      ],
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "student_count": 60
+    },
+    {
+      "exam_id": "EXAM30",
+      "course_code": "CS303",
+      "day": "Tue",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "SH-1"
+      ],
+      "student_groups": [
+        "Y3-CSE"
+      ],
+      "student_count": 60
+    },
+    {
+      "exam_id": "EXAM31",
+      "course_code": "EC301",
+      "day": "Mon",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "SH-2"
+      ],
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "student_count": 60
+    },
+    {
+      "exam_id": "EXAM32",
+      "course_code": "EC302",
+      "day": "Mon",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "SH-2"
+      ],
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "student_count": 60
+    },
+    {
+      "exam_id": "EXAM33",
+      "course_code": "EC303",
+      "day": "Tue",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "SH-2"
+      ],
+      "student_groups": [
+        "Y3-ECE"
+      ],
+      "student_count": 60
+    },
+    {
+      "exam_id": "EXAM34",
+      "course_code": "ME301",
+      "day": "Tue",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "SH-1"
+      ],
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "student_count": 58
+    },
+    {
+      "exam_id": "EXAM35",
+      "course_code": "ME302",
+      "day": "Wed",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-1"
+      ],
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "student_count": 58
+    },
+    {
+      "exam_id": "EXAM36",
+      "course_code": "ME303",
+      "day": "Wed",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-5"
+      ],
+      "student_groups": [
+        "Y3-ME"
+      ],
+      "student_count": 58
+    },
+    {
+      "exam_id": "EXAM37",
+      "course_code": "CE301",
+      "day": "Tue",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "SH-2"
+      ],
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "student_count": 56
+    },
+    {
+      "exam_id": "EXAM38",
+      "course_code": "CE302",
+      "day": "Wed",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-2"
+      ],
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "student_count": 56
+    },
+    {
+      "exam_id": "EXAM39",
+      "course_code": "CE303",
+      "day": "Wed",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-6"
+      ],
+      "student_groups": [
+        "Y3-CE"
+      ],
+      "student_count": 56
+    },
+    {
+      "exam_id": "EXAM40",
+      "course_code": "EE301",
+      "day": "Wed",
+      "start_period": "P2",
+      "duration_hours": 2,
+      "room_ids": [
+        "LH-3"
+      ],
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "student_count": 58
+    },
+    {
+      "exam_id": "EXAM41",
+      "course_code": "EE302",
+      "day": "Wed",
+      "start_period": "P6",
+      "duration_hours": 2,
+      "room_ids": [
+        "SH-1"
+      ],
+      "student_groups": [
+        "Y3-EE"
+      ],
+      "student_count": 58
+    }
+  ],
+  "bookings": [
+    {
+      "booking_id": "BK01",
+      "title": "Spectra Opening Ceremony",
+      "category": "institute_event",
+      "decision": "rejected",
+      "assigned_room": null,
+      "day": "Wed",
+      "start_period": "P6",
+      "end_period": "P8",
+      "reason": "Venue AUD is undergoing scheduled maintenance during Wed P6-P8.",
+      "evidence": {
+        "maintenance": true,
+        "room_id": "AUD"
+      }
+    },
+    {
+      "booking_id": "BK02",
+      "title": "RoboWars Arena Setup",
+      "category": "club_event",
+      "decision": "approved",
+      "assigned_room": "OAT",
+      "day": "Fri",
+      "start_period": "P7",
+      "end_period": "P9",
+      "reason": "Approved in Open Air Theatre (OAT). Venue is free and satisfies capacity 600 for attendance 250.",
+      "evidence": {
+        "room_id": "OAT",
+        "capacity": 600,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK03",
+      "title": "Distinguished AI Lecture",
+      "category": "guest_lecture",
+      "decision": "approved",
+      "assigned_room": "SH-1",
+      "day": "Tue",
+      "start_period": "P3",
+      "end_period": "P4",
+      "reason": "Approved in Seminar Hall 1 (SH-1). Venue is free and satisfies capacity 160 for attendance 120.",
+      "evidence": {
+        "room_id": "SH-1",
+        "capacity": 160,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK04",
+      "title": "24-Hour Hackathon Pre-Briefing",
+      "category": "club_event",
+      "decision": "approved",
+      "assigned_room": "LAB-CS1",
+      "day": "Thu",
+      "start_period": "P10",
+      "end_period": "P11",
+      "reason": "Approved in Computing Lab 1 (LAB-CS1). Venue is free and satisfies capacity 80 for attendance 60.",
+      "evidence": {
+        "room_id": "LAB-CS1",
+        "capacity": 80,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK05",
+      "title": "ECE Alumni Interaction",
+      "category": "department_event",
+      "decision": "approved",
+      "assigned_room": "SH-2",
+      "day": "Thu",
+      "start_period": "P3",
+      "end_period": "P4",
+      "reason": "Approved in Seminar Hall 2 (SH-2). Venue is free and satisfies capacity 150 for attendance 100.",
+      "evidence": {
+        "room_id": "SH-2",
+        "capacity": 150,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK06",
+      "title": "Acoustic Night Rehearsal",
+      "category": "club_event",
+      "decision": "approved",
+      "assigned_room": "OAT",
+      "day": "Thu",
+      "start_period": "P10",
+      "end_period": "P12",
+      "reason": "Approved in Open Air Theatre (OAT). Venue is free and satisfies capacity 600 for attendance 80.",
+      "evidence": {
+        "room_id": "OAT",
+        "capacity": 600,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK07",
+      "title": "Inter-College Debate Finals",
+      "category": "institute_event",
+      "decision": "approved",
+      "assigned_room": "SH-1",
+      "day": "Mon",
+      "start_period": "P6",
+      "end_period": "P7",
+      "reason": "Approved in Seminar Hall 1 (SH-1). Venue is free and satisfies capacity 160 for attendance 140.",
+      "evidence": {
+        "room_id": "SH-1",
+        "capacity": 160,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK08",
+      "title": "Poetry Slam",
+      "category": "club_event",
+      "decision": "approved",
+      "assigned_room": "CR-1",
+      "day": "Tue",
+      "start_period": "P10",
+      "end_period": "P11",
+      "reason": "Approved in Classroom 1 (CR-1). Venue is free and satisfies capacity 80 for attendance 45.",
+      "evidence": {
+        "room_id": "CR-1",
+        "capacity": 80,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK09",
+      "title": "CAD Design Showcase",
+      "category": "department_event",
+      "decision": "rejected",
+      "assigned_room": null,
+      "day": "Wed",
+      "start_period": "P2",
+      "end_period": "P4",
+      "reason": "Requested venue LAB-ME is occupied at Wed P2-P4 by higher-priority event, and no compatible alternative venue is available.",
+      "evidence": {
+        "conflicts": [
+          "Class S023 at P2",
+          "Class S023 at P3",
+          "Class S023 at P4"
+        ]
+      }
+    },
+    {
+      "booking_id": "BK10",
+      "title": "Spectra Dance Troupe Practice",
+      "category": "club_event",
+      "decision": "approved",
+      "assigned_room": "AUD",
+      "day": "Mon",
+      "start_period": "P10",
+      "end_period": "P12",
+      "reason": "Approved in Main Auditorium (AUD). Venue is free and satisfies capacity 450 for attendance 30.",
+      "evidence": {
+        "room_id": "AUD",
+        "capacity": 450,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK11",
+      "title": "Semiconductor Industry Roadmap",
+      "category": "guest_lecture",
+      "decision": "alternative_offered",
+      "assigned_room": "AUD",
+      "day": "Fri",
+      "start_period": "P3",
+      "end_period": "P4",
+      "alternative": {
+        "room_id": "AUD",
+        "day": "Fri",
+        "start_period": "P3",
+        "end_period": "P4"
+      },
+      "reason": "Requested venue LH-1 is occupied by regular class S049. Alternative offered in Main Auditorium (AUD) at the same time.",
+      "evidence": {
+        "primary_conflicts": [
+          "P3: S049",
+          "P4: S031"
+        ],
+        "alternative_room": "AUD"
+      }
+    },
+    {
+      "booking_id": "BK12",
+      "title": "Annual Photo Exhibition",
+      "category": "club_event",
+      "decision": "approved",
+      "assigned_room": "SH-2",
+      "day": "Wed",
+      "start_period": "P6",
+      "end_period": "P8",
+      "reason": "Approved in Seminar Hall 2 (SH-2). Venue is free and satisfies capacity 150 for attendance 90.",
+      "evidence": {
+        "room_id": "SH-2",
+        "capacity": 150,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK13",
+      "title": "Smart Cities Workshop",
+      "category": "department_event",
+      "decision": "approved",
+      "assigned_room": "LH-3",
+      "day": "Thu",
+      "start_period": "P6",
+      "end_period": "P8",
+      "reason": "Approved in Lecture Hall 3 (LH-3). Venue is free and satisfies capacity 140 for attendance 80.",
+      "evidence": {
+        "room_id": "LH-3",
+        "capacity": 140,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK14",
+      "title": "LAN Gaming Tournament - Valorant",
+      "category": "club_event",
+      "decision": "approved",
+      "assigned_room": "LAB-CS2",
+      "day": "Fri",
+      "start_period": "P9",
+      "end_period": "P12",
+      "reason": "Approved in Computing Lab 2 (LAB-CS2). Venue is free and satisfies capacity 80 for attendance 70.",
+      "evidence": {
+        "room_id": "LAB-CS2",
+        "capacity": 80,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK15",
+      "title": "Electric Mobility Trends",
+      "category": "guest_lecture",
+      "decision": "approved",
+      "assigned_room": "SH-1",
+      "day": "Wed",
+      "start_period": "P2",
+      "end_period": "P3",
+      "reason": "Approved in Seminar Hall 1 (SH-1). Venue is free and satisfies capacity 160 for attendance 130.",
+      "evidence": {
+        "room_id": "SH-1",
+        "capacity": 160,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK16",
+      "title": "Street Play Rehearsal",
+      "category": "club_event",
+      "decision": "approved",
+      "assigned_room": "OAT",
+      "day": "Tue",
+      "start_period": "P1",
+      "end_period": "P2",
+      "reason": "Approved in Open Air Theatre (OAT). Venue is free and satisfies capacity 600 for attendance 40.",
+      "evidence": {
+        "room_id": "OAT",
+        "capacity": 600,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK17",
+      "title": "Campus Placement Drive - Amazon",
+      "category": "institute_event",
+      "decision": "approved",
+      "assigned_room": "AUD",
+      "day": "Tue",
+      "start_period": "P1",
+      "end_period": "P5",
+      "reason": "Approved in Main Auditorium (AUD). Venue is free and satisfies capacity 450 for attendance 380.",
+      "evidence": {
+        "room_id": "AUD",
+        "capacity": 450,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK18",
+      "title": "PCB Design Hands-on Workshop",
+      "category": "club_event",
+      "decision": "rejected",
+      "assigned_room": null,
+      "day": "Fri",
+      "start_period": "P8",
+      "end_period": "P9",
+      "reason": "Requested venue LAB-EE is occupied at Fri P8-P9 by higher-priority event, and no compatible alternative venue is available.",
+      "evidence": {
+        "conflicts": [
+          "Class S027 at P8"
+        ]
+      }
+    },
+    {
+      "booking_id": "BK19",
+      "title": "Seismic Disaster Mitigation",
+      "category": "guest_lecture",
+      "decision": "alternative_offered",
+      "assigned_room": "AUD",
+      "day": "Mon",
+      "start_period": "P8",
+      "end_period": "P9",
+      "alternative": {
+        "room_id": "AUD",
+        "day": "Mon",
+        "start_period": "P8",
+        "end_period": "P9"
+      },
+      "reason": "Requested venue LH-2 is occupied by regular class S136. Alternative offered in Main Auditorium (AUD) at the same time.",
+      "evidence": {
+        "primary_conflicts": [
+          "P8: S136"
+        ],
+        "alternative_room": "AUD"
+      }
+    },
+    {
+      "booking_id": "BK20",
+      "title": "Spectra Chess Championship",
+      "category": "club_event",
+      "decision": "approved",
+      "assigned_room": "CR-3",
+      "day": "Thu",
+      "start_period": "P6",
+      "end_period": "P8",
+      "reason": "Approved in Classroom 3 (CR-3). Venue is free and satisfies capacity 80 for attendance 40.",
+      "evidence": {
+        "room_id": "CR-3",
+        "capacity": 80,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK21",
+      "title": "Smart Grid Demo",
+      "category": "department_event",
+      "decision": "approved",
+      "assigned_room": "SH-2",
+      "day": "Tue",
+      "start_period": "P6",
+      "end_period": "P7",
+      "reason": "Approved in Seminar Hall 2 (SH-2). Venue is free and satisfies capacity 150 for attendance 80.",
+      "evidence": {
+        "room_id": "SH-2",
+        "capacity": 150,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK22",
+      "title": "Star Night Musical Band",
+      "category": "institute_event",
+      "decision": "approved",
+      "assigned_room": "OAT",
+      "day": "Fri",
+      "start_period": "P10",
+      "end_period": "P13",
+      "reason": "Approved in Open Air Theatre (OAT). Venue is free and satisfies capacity 600 for attendance 550.",
+      "evidence": {
+        "room_id": "OAT",
+        "capacity": 600,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK23",
+      "title": "Night Sky Observation",
+      "category": "club_event",
+      "decision": "approved",
+      "assigned_room": "OAT",
+      "day": "Wed",
+      "start_period": "P11",
+      "end_period": "P13",
+      "reason": "Approved in Open Air Theatre (OAT). Venue is free and satisfies capacity 600 for attendance 70.",
+      "evidence": {
+        "room_id": "OAT",
+        "capacity": 600,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK24",
+      "title": "Quantum Mechanics & Computing",
+      "category": "guest_lecture",
+      "decision": "approved",
+      "assigned_room": "SH-1",
+      "day": "Thu",
+      "start_period": "P7",
+      "end_period": "P8",
+      "reason": "Approved in Seminar Hall 1 (SH-1). Venue is free and satisfies capacity 160 for attendance 90.",
+      "evidence": {
+        "room_id": "SH-1",
+        "capacity": 160,
+        "clashes": []
+      }
+    },
+    {
+      "booking_id": "BK25",
+      "title": "Origami Workshop (Cancelled)",
+      "category": "club_event",
+      "decision": "rejected",
+      "assigned_room": null,
+      "day": "Wed",
+      "start_period": "P3",
+      "end_period": "P4",
+      "reason": "Request was formally cancelled by the requester.",
+      "evidence": {
+        "cancelled_by_requester": true
+      }
+    }
+  ]
 }
