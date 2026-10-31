@@ -151,3 +151,17 @@ def load_default_dataset(force_reload: bool = False) -> Dataset:
                 _DATASET_CACHE = Dataset(data)
                 return _DATASET_CACHE
     raise FileNotFoundError("cit_public.json could not be found in any expected location.")
+
+def get_schedule_export_path(filename: str = "schedule.json") -> Optional[str]:
+    possible_paths = [
+        os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "seed_data", filename)),
+        os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "exports", filename)),
+        os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "exports", filename)),
+        os.path.abspath(os.path.join("exports", filename)),
+        os.path.abspath(os.path.join("seed_data", filename))
+    ]
+    for path in possible_paths:
+        if os.path.exists(path):
+            return path
+    return None
+

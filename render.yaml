@@ -18,7 +18,7 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: FRONTEND_ORIGINS
-        sync: false
+        value: "*"
       - key: FRONTEND_ORIGIN_REGEX
         value: https://.*\.vercel\.app
       - key: LLM_PROVIDER

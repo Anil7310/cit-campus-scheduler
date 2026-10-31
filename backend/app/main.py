@@ -48,8 +48,9 @@ def _first_boot_pre_generation():
 
             assignments = None
             metrics = None
-            schedule_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "exports", "schedule.json"))
-            if os.path.exists(schedule_path):
+            from app.scheduler.dataset_adapter import get_schedule_export_path
+            schedule_path = get_schedule_export_path("schedule.json")
+            if schedule_path and os.path.exists(schedule_path):
                 try:
                     with open(schedule_path, "r", encoding="utf-8") as f:
                         export_data = json.load(f)
