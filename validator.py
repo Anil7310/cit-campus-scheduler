@@ -38,6 +38,14 @@ def validate_schedule(cit_data: Dict[str, Any], schedule_data: Dict[str, Any], s
     faculty_by_id = {f["id"]: f for f in cit_data.get("faculty", [])}
     groups_by_id = {g["id"]: g for g in cit_data.get("student_groups", [])}
     sessions_by_id = {s["id"]: s for s in cit_data.get("sessions", [])}
+    for ns in schedule_data.get("new_sessions", []):
+        if "id" in ns:
+            sessions_by_id[ns["id"]] = ns
+    for d in schedule_data.get("disruptions", []):
+        if d.get("type") == "new_session" and "session" in d:
+            ns = d["session"]
+            if "id" in ns:
+                sessions_by_id[ns["id"]] = ns
     exams_by_id = {e["id"]: e for e in cit_data.get("exams", [])}
     bookings_by_id = {b["id"]: b for b in cit_data.get("booking_requests", [])}
 
